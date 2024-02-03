@@ -1,8 +1,8 @@
 {
   "name": "webtechpie-be",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "Backend for the webtechpie frontend",
+  "author": "Hidayt Rahman",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
