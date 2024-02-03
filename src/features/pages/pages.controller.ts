@@ -19,6 +19,12 @@ export class PagesController {
         return this.pagesServices.getSolutions();
     }
 
+    // pages/portfolio
+    @Get("/portfolio")
+    getPortfolio(): any {
+        return this.pagesServices.getPortfolio();
+    }
+
     // pages/about
 
     // pages/navigations

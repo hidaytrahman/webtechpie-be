@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { solutionHighlights } from './data';
+import { portfolioList, solutionHighlights } from './data';
 
 @Injectable()
 export class PagesServices {
@@ -14,6 +14,16 @@ export class PagesServices {
 			pageId: "solutions",
 			descriptions: "Coding is a form of creative expression. You can turn your ideas into reality by building software and applications that solve real-world problems.",
 			highlights: solutionHighlights
+		}
+	}
+
+	getPortfolio() {
+		return {
+			title: "Portfolio",
+			pageId: "portfolio",
+			descriptions: "Our developer community",
+
+			list: portfolioList
 		}
 	}
 
