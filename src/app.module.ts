@@ -1,4 +1,6 @@
 import { MiddlewareConsumer, Module, NestModule } from "@nestjs/common"
+import { MongooseModule } from "@nestjs/mongoose"
+
 import { AppController } from "./app.controller"
 import { AppService } from "./app.service"
 import { SolutionsModule } from "./features/solutions/solutions.module"
@@ -8,6 +10,7 @@ import { PagesModule } from "./features/pages/pages.module"
 import { CoreModule } from "./features/core/core.module"
 import { PlanModule } from "./features/plan/plan.module"
 
+
 @Module({
 	imports: [
 		SolutionsModule,
@@ -15,6 +18,8 @@ import { PlanModule } from "./features/plan/plan.module"
 		PagesModule,
 		CoreModule,
 		PlanModule,
+
+		MongooseModule.forRoot("mongodb://localhost/nest"),
 	],
 	controllers: [AppController],
 	providers: [AppService],
