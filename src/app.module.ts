@@ -1,21 +1,19 @@
-import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { SolutionsModule } from './features/solutions/solutions.module';
-import { TeamsModule } from './features/teams/teams.module';
-import { LoggerMiddleware } from './utils/middlewares/logger.middleware';
-import { PagesModule } from './features/pages/pages.module';
+import { MiddlewareConsumer, Module, NestModule } from "@nestjs/common"
+import { AppController } from "./app.controller"
+import { AppService } from "./app.service"
+import { SolutionsModule } from "./features/solutions/solutions.module"
+import { TeamsModule } from "./features/teams/teams.module"
+import { LoggerMiddleware } from "./utils/middlewares/logger.middleware"
+import { PagesModule } from "./features/pages/pages.module"
+import { CoreModule } from "./features/core/core.module"
 
 @Module({
-  imports: [SolutionsModule, TeamsModule, PagesModule],
-  controllers: [AppController],
-  providers: [AppService],
+	imports: [SolutionsModule, TeamsModule, PagesModule, CoreModule],
+	controllers: [AppController],
+	providers: [AppService],
 })
 export class AppModule implements NestModule {
-
-  configure(consumer: MiddlewareConsumer) {
-    consumer
-      .apply(LoggerMiddleware)
-      .forRoutes('teams') // currently log enables for teams
-  }
+	configure(consumer: MiddlewareConsumer) {
+		consumer.apply(LoggerMiddleware).forRoutes("*") // currently log enables for all
+	}
 }
