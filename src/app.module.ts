@@ -9,6 +9,8 @@ import { LoggerMiddleware } from "./utils/middlewares/logger.middleware";
 import { PagesModule } from "./features/pages/pages.module";
 import { CoreModule } from "./features/core/core.module";
 import { PlanModule } from "./features/plan/plan.module";
+import { Cat, CatSchema } from "./schemas/cat.schema";
+import { PlanServices } from "./features/plan/plan.services";
 
 @Module({
 	imports: [
@@ -19,9 +21,21 @@ import { PlanModule } from "./features/plan/plan.module";
 		PlanModule,
 
 		MongooseModule.forRoot("mongodb://localhost/nest"),
+		MongooseModule.forFeatureAsync([
+			{
+				name: Cat.name,
+				useFactory: () => {
+					const schema = CatSchema;
+					schema.pre("save", function () {
+						console.log("Hello from pre save");
+					});
+					return schema;
+				},
+			},
+		]),
 	],
 	controllers: [AppController],
-	providers: [AppService],
+	providers: [AppService, PlanServices],
 })
 export class AppModule implements NestModule {
 	configure(consumer: MiddlewareConsumer) {
