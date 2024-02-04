@@ -4,7 +4,7 @@ export const solutionHighlights = [
 	"Open discussions",
 	"Collborative teams",
 	"Mock Interviews",
-	"On demand training (Tech only)"
+	"On demand training (Tech only)",
 ]
 
 export const portfolioList = [
@@ -14,7 +14,7 @@ export const portfolioList = [
 		description: `Basic configuration of the code environment needed for your project or new machine.`,
 		url: "https://codeeng.vercel.app/",
 		avatar: "",
-		technologies: []
+		technologies: [],
 	},
 	{
 		id: 2,
@@ -23,7 +23,7 @@ export const portfolioList = [
 		url: "https://hidaytrahman.github.io/react-carbonui/",
 		avatar: "",
 		github: "https://github.com/hidaytrahman/react-carbonui",
-		technologies: []
+		technologies: [],
 	},
 	{
 		id: 3,
@@ -32,7 +32,7 @@ export const portfolioList = [
 		url: "https://preapi.vercel.app/",
 		avatar: "",
 		github: "https://github.com/hidaytrahman/preapi",
-		technologies: []
+		technologies: [],
 	},
 	{
 		id: 4,
@@ -41,10 +41,8 @@ export const portfolioList = [
 		url: "https://hidaytrahman.github.io/chepo/",
 		avatar: "",
 		github: "https://github.com/hidaytrahman/chepo",
-		technologies: []
-	}
-
-
+		technologies: [],
+	},
 ]
 
 export const solutions = [
@@ -53,5 +51,5 @@ export const solutions = [
 	"Open discussions",
 	"Collborative teams",
 	"Mock Interviews",
-	"On demand training (Tech only)"
+	"On demand training (Tech only)",
 ]
