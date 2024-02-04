@@ -6,9 +6,16 @@ import { TeamsModule } from "./features/teams/teams.module"
 import { LoggerMiddleware } from "./utils/middlewares/logger.middleware"
 import { PagesModule } from "./features/pages/pages.module"
 import { CoreModule } from "./features/core/core.module"
+import { PlanModule } from "./features/plan/plan.module"
 
 @Module({
-	imports: [SolutionsModule, TeamsModule, PagesModule, CoreModule],
+	imports: [
+		SolutionsModule,
+		TeamsModule,
+		PagesModule,
+		CoreModule,
+		PlanModule,
+	],
 	controllers: [AppController],
 	providers: [AppService],
 })
