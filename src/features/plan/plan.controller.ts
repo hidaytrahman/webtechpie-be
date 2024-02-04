@@ -1,5 +1,5 @@
-import { Controller, Get } from "@nestjs/common"
-import { PlanServices } from "./plan.services"
+import { Controller, Get } from "@nestjs/common";
+import { PlanServices } from "./plan.services";
 
 @Controller("plan") // {baseURL}/plan
 export class PlanController {
@@ -7,6 +7,6 @@ export class PlanController {
 
 	@Get()
 	getPlan() {
-		return this.planServices.getPlans()
+		return this.planServices.getPlans();
 	}
 }

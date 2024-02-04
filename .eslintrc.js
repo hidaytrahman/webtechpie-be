@@ -37,7 +37,7 @@ module.exports = {
 				endOfLine: 'auto',
 				printWidth: 80,
 				trailingComma: 'es5',
-				semi: false,
+				semi: true,
 				doubleQuote: true,
 				jsxSingleQuote: true,
 				singleQuote: false,

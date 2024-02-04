@@ -1,33 +1,33 @@
 export interface INavMeta {
-	title: string
-	keywords?: string
-	descriptions?: string
+	title: string;
+	keywords?: string;
+	descriptions?: string;
 }
 
 export interface ISocialMedia {
-	id: string | number
-	icon: string
-	link: string
-	title?: string
+	id: string | number;
+	icon: string;
+	link: string;
+	title?: string;
 }
 
 export interface INavCreative {
-	navTitles: string[]
+	navTitles: string[];
 }
 
 export interface INavigation {
-	id: string | number
-	title: string
-	name: string
-	link: string
-	creative?: INavCreative
-	meta?: INavMeta
+	id: string | number;
+	title: string;
+	name: string;
+	link: string;
+	creative?: INavCreative;
+	meta?: INavMeta;
 }
 
 export interface INavigationResponse {
 	navigations: {
-		primary: INavigation[]
-		footer: INavigation[]
-		social: ISocialMedia[]
-	}
+		primary: INavigation[];
+		footer: INavigation[];
+		social: ISocialMedia[];
+	};
 }

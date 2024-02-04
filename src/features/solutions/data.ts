@@ -5,7 +5,7 @@ export const solutionHighlights = [
 	"Collborative teams",
 	"Mock Interviews",
 	"On demand training (Tech only)",
-]
+];
 
 export const solutions = [
 	"Get trained by subject matter expert's",
@@ -14,4 +14,4 @@ export const solutions = [
 	"Collborative teams",
 	"Mock Interviews",
 	"On demand training (Tech only)",
-]
+];

@@ -1,10 +1,10 @@
-import { Injectable } from "@nestjs/common"
-import { portfolioList, solutionHighlights } from "./data"
+import { Injectable } from "@nestjs/common";
+import { portfolioList, solutionHighlights } from "./data";
 
 @Injectable()
 export class PagesServices {
 	getLanding() {
-		return "This is landing"
+		return "This is landing";
 	}
 
 	getSolutions() {
@@ -14,7 +14,7 @@ export class PagesServices {
 			descriptions:
 				"Coding is a form of creative expression. You can turn your ideas into reality by building software and applications that solve real-world problems.",
 			highlights: solutionHighlights,
-		}
+		};
 	}
 
 	getPortfolio() {
@@ -24,6 +24,6 @@ export class PagesServices {
 			descriptions: "Our developer community",
 
 			list: portfolioList,
-		}
+		};
 	}
 }

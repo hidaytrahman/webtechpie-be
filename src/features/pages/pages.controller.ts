@@ -1,12 +1,12 @@
-import { Controller, Get } from "@nestjs/common"
-import { PagesServices } from "./pages.services"
+import { Controller, Get } from "@nestjs/common";
+import { PagesServices } from "./pages.services";
 
 @Controller("/pages")
 export class PagesController {
 	constructor(private pagesServices: PagesServices) {}
 	@Get("/landing")
 	getLanding(): any {
-		return this.pagesServices.getLanding()
+		return this.pagesServices.getLanding();
 	}
 
 	// pages/config
@@ -14,13 +14,13 @@ export class PagesController {
 	// pages/services
 	@Get("/solutions")
 	getSolutions(): any {
-		return this.pagesServices.getSolutions()
+		return this.pagesServices.getSolutions();
 	}
 
 	// pages/portfolio
 	@Get("/portfolio")
 	getPortfolio(): any {
-		return this.pagesServices.getPortfolio()
+		return this.pagesServices.getPortfolio();
 	}
 
 	// pages/about

@@ -1,4 +1,4 @@
-import { ITeamMember } from "./types"
+import { ITeamMember } from "./types";
 
 export const teamMemberList: ITeamMember[] = [
 	{
@@ -23,4 +23,4 @@ export const teamMemberList: ITeamMember[] = [
 	},
 
 	// More people...
-]
+];

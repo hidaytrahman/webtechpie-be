@@ -1,4 +1,4 @@
-import { INavigation, ISocialMedia } from "./types"
+import { INavigation, ISocialMedia } from "./types";
 
 // main navigation
 const primaryNavs: INavigation[] = [
@@ -53,7 +53,7 @@ const primaryNavs: INavigation[] = [
 			title: "Portfolio | Webtechpie",
 		},
 	},
-]
+];
 
 const footerNavs: INavigation[] = [
 	{
@@ -62,7 +62,7 @@ const footerNavs: INavigation[] = [
 		name: "team",
 		link: "/team",
 	},
-]
+];
 
 const socialMediaList: ISocialMedia[] = [
 	{
@@ -80,7 +80,7 @@ const socialMediaList: ISocialMedia[] = [
 		icon: "fa-youtube-play",
 		link: "https://www.youtube.com/@webtechpie",
 	},
-]
+];
 
 // prepared response for getNavigations api
 export const navigationsResponse = {
@@ -89,4 +89,4 @@ export const navigationsResponse = {
 		footer: footerNavs,
 		social: socialMediaList,
 	},
-}
+};

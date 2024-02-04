@@ -5,4 +5,4 @@ export const solutionHighlights = [
 	"Collborative teams",
 	"Mock Interviews",
 	"On demand training (Tech only)",
-]
+];
