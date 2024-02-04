@@ -26,35 +26,4 @@ export class PagesServices {
 			list: portfolioList,
 		}
 	}
-
-	getNavigations() {
-		return {
-			primaryNavs: [
-				{ id: 1, title: "Home", name: "home", link: "/" },
-				{ id: 2, title: "About Us", name: "about", link: "/about" },
-				{
-					id: 3,
-					title: "Solutions",
-					name: "solutions",
-					link: "/products",
-				},
-			],
-			footerNavs: [
-				{ id: 1, title: "Home", name: "home", link: "/" },
-				{ id: 2, title: "About Us", name: "about", link: "/about" },
-				{
-					id: 3,
-					title: "Solutions",
-					name: "solutions",
-					link: "/products",
-				},
-			],
-
-			socialMediaList: [
-				{ icon: "fa-facebook-square", link: "#" },
-				{ icon: "fa-twitter", link: "#" },
-				{ icon: "fa-google-plus-g", link: "#" },
-			],
-		}
-	}
 }

@@ -1,8 +1,10 @@
 import { Injectable } from "@nestjs/common"
+import { navigationsResponse } from "./utils/navigation.utils"
+import { INavigationResponse } from "./utils/types"
 
 @Injectable()
 export class CoresServices {
-	getSolutions() {
-		return "This is the solution to your problem from services"
+	getNavigations(): INavigationResponse {
+		return navigationsResponse
 	}
 }

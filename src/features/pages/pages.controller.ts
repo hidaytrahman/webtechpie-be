@@ -25,11 +25,5 @@ export class PagesController {
 
 	// pages/about
 
-	// pages/navigations
-	@Get("/navigations")
-	getNavigations(): any {
-		return this.pagesServices.getNavigations()
-	}
-
 	// pages/members
 }
