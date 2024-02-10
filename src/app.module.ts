@@ -10,8 +10,11 @@ import { LoggerMiddleware } from "./utils/middlewares/logger.middleware";
 import { PagesModule } from "./features/pages/pages.module";
 import { CoreModule } from "./features/core/core.module";
 import { PlanModule } from "./features/plan/plan.module";
-import { Cat, CatSchema } from "./schemas/cat.schema";
+// import { Cat, CatSchema } from "./schemas/cat.schema";
 import { PlanServices } from "./features/plan/plan.services";
+import { Plan, PlanSchema } from "./features/plan/plan.schema";
+import { APP_FILTER } from "@nestjs/core";
+import { HttpExceptionFilter } from "./config/http-exception.filter";
 
 @Module({
 	imports: [
@@ -20,19 +23,13 @@ import { PlanServices } from "./features/plan/plan.services";
 			isGlobal: true,
 		}),
 
-		SolutionsModule,
-		TeamsModule,
-		PagesModule,
-		CoreModule,
-		PlanModule,
-
 		// database config
 		MongooseModule.forRoot(`${process.env.DATABSE_URL}`),
 		MongooseModule.forFeatureAsync([
 			{
-				name: Cat.name,
+				name: Plan.name,
 				useFactory: () => {
-					const schema = CatSchema;
+					const schema = PlanSchema;
 					schema.pre("save", function () {
 						console.log("Hello from pre save");
 					});
@@ -42,9 +39,23 @@ import { PlanServices } from "./features/plan/plan.services";
 				},
 			},
 		]),
+
+		// feature modules
+		SolutionsModule,
+		TeamsModule,
+		PagesModule,
+		CoreModule,
+		PlanModule,
 	],
 	controllers: [AppController],
-	providers: [AppService, PlanServices],
+	providers: [
+		{
+			provide: APP_FILTER,
+			useClass: HttpExceptionFilter,
+		},
+		AppService,
+		PlanServices,
+	],
 })
 export class AppModule implements NestModule {
 	configure(consumer: MiddlewareConsumer) {
