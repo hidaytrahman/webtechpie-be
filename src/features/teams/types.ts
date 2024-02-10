@@ -1,5 +1,5 @@
 export interface ITeamMember {
-	name: string
-	role: string
-	avatar: string
+	name: string;
+	role: string;
+	avatar: string;
 }

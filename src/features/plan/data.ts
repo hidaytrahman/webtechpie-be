@@ -1,4 +1,4 @@
-import { IPlan } from "./types"
+import { IPlan } from "./types";
 
 export const planList: IPlan[] = [
 	{
@@ -30,4 +30,4 @@ export const planList: IPlan[] = [
 		type: "always",
 		price: 0,
 	},
-]
+];

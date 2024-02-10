@@ -1,12 +1,15 @@
-import { Controller, Get } from "@nestjs/common"
-import { PagesServices } from "./pages.services"
+import { Body, Controller, Get, Post } from "@nestjs/common";
+import { PagesServices } from "./pages.services";
+import { CreatePageDto } from "./dto/create-page.dto";
+// import { CreatePortfolioDto } from "./dto/create-portfolio.dto";
 
 @Controller("/pages")
 export class PagesController {
 	constructor(private pagesServices: PagesServices) {}
+
 	@Get("/landing")
-	getLanding(): any {
-		return this.pagesServices.getLanding()
+	async getLanding() {
+		return await this.pagesServices.fetchLanding();
 	}
 
 	// pages/config
@@ -14,16 +17,26 @@ export class PagesController {
 	// pages/services
 	@Get("/solutions")
 	getSolutions(): any {
-		return this.pagesServices.getSolutions()
+		return this.pagesServices.fetchSolutions();
 	}
 
 	// pages/portfolio
 	@Get("/portfolio")
 	getPortfolio(): any {
-		return this.pagesServices.getPortfolio()
+		return this.pagesServices.getPortfolio();
 	}
 
-	// pages/about
+	// core/portfolio
+	@Post()
+	async createPortfolio(@Body() createPortfolioDto: CreatePageDto) {
+		return this.pagesServices.createPage(createPortfolioDto);
+	}
+
+	// pages/community
+	@Get("/portfolio")
+	getCommunity(): any {
+		return this.pagesServices.getPortfolio();
+	}
 
 	// pages/members
 }

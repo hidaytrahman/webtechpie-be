@@ -1,5 +1,6 @@
-import { Controller, Get } from "@nestjs/common"
-import { PlanServices } from "./plan.services"
+import { Body, Controller, Get, Post } from "@nestjs/common";
+import { PlanServices } from "./plan.services";
+import { CreatePlanDto } from "./create-plan.dto";
 
 @Controller("plan") // {baseURL}/plan
 export class PlanController {
@@ -7,6 +8,12 @@ export class PlanController {
 
 	@Get()
 	getPlan() {
-		return this.planServices.getPlans()
+		return this.planServices.fetchPlans();
+	}
+
+	// {baseURL}/plan/create
+	@Post("/create")
+	async createPlan(@Body() createUserDto: CreatePlanDto) {
+		return this.planServices.create(createUserDto);
 	}
 }
