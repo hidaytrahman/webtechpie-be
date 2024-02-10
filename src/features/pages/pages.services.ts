@@ -66,12 +66,22 @@ export class PagesServices {
 	}
 
 	async createPage(payload: CreatePageDto): Promise<any> {
-		const data = new this.pageModel(payload);
-		const result = await data.save();
+		// check if page is already exists
+		const page = await this.pageModel.findOne({
+			name: payload.name,
+		});
 
-		return {
-			data: result,
-			message: `Page '${result.name}' has been successfully created!`,
-		};
+		if (page) {
+			return {
+				message: `Page '${payload.name}' is already exists!`,
+			};
+		} else {
+			const data = new this.pageModel(payload);
+			const result = await data.save();
+			return {
+				data: result,
+				message: `Page '${result.name}' has been successfully created!`,
+			};
+		}
 	}
 }

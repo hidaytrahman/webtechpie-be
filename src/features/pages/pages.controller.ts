@@ -32,7 +32,11 @@ export class PagesController {
 		return this.pagesServices.createPage(createPortfolioDto);
 	}
 
-	// pages/about
+	// pages/community
+	@Get("/portfolio")
+	getCommunity(): any {
+		return this.pagesServices.getPortfolio();
+	}
 
 	// pages/members
 }

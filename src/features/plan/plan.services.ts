@@ -17,13 +17,24 @@ export class PlanServices {
 	}
 
 	async create(payload: CreatePlanDto): Promise<any> {
-		const data = new this.planModel(payload);
-		const result = await data.save();
+		// check if page is already exists
+		const plan = await this.planModel.findOne({
+			name: payload.name,
+		});
 
-		return {
-			data: result,
-			message: `Plan '${result.name}' has been successfully created!`,
-		};
+		if (plan) {
+			return {
+				message: `Plan '${payload.name}' is already exists!`,
+			};
+		} else {
+			const data = new this.planModel(payload);
+			const result = await data.save();
+
+			return {
+				data: result,
+				message: `Plan '${result.name}' has been successfully created!`,
+			};
+		}
 	}
 
 	async fetchPlans(): Promise<Plan[]> {

@@ -17,13 +17,24 @@ export class CoresServices {
 	}
 
 	async createPortfolio(payload: CreatePortfolioDto): Promise<any> {
-		const data = new this.portfolioModel(payload);
-		const result = await data.save();
+		// check if page is already exists
+		const portfolio = await this.portfolioModel.findOne({
+			name: payload.name,
+		});
 
-		return {
-			data: result,
-			message: `Portfolio '${result.name}' has been successfully created!`,
-		};
+		if (portfolio) {
+			return {
+				message: `Portfolio '${payload.name}' is already exists!`,
+			};
+		} else {
+			const data = new this.portfolioModel(payload);
+			const result = await data.save();
+
+			return {
+				data: result,
+				message: `Portfolio '${result.name}' has been successfully created!`,
+			};
+		}
 	}
 
 	async fetchPortfolio(): Promise<Portoflio[]> {
