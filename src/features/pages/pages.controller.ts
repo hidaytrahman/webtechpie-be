@@ -6,9 +6,10 @@ import { CreatePageDto } from "./dto/create-page.dto";
 @Controller("/pages")
 export class PagesController {
 	constructor(private pagesServices: PagesServices) {}
+
 	@Get("/landing")
-	getLanding(): any {
-		return this.pagesServices.getLanding();
+	async getLanding() {
+		return await this.pagesServices.fetchLanding();
 	}
 
 	// pages/config
@@ -16,7 +17,7 @@ export class PagesController {
 	// pages/services
 	@Get("/solutions")
 	getSolutions(): any {
-		return this.pagesServices.getSolutions();
+		return this.pagesServices.fetchSolutions();
 	}
 
 	// pages/portfolio

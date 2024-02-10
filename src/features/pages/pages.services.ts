@@ -7,12 +7,42 @@ import { Page } from "./schema/portfolio.schema";
 
 @Injectable()
 export class PagesServices {
-	constructor(
-		@InjectModel(Page.name) private pageModel: Model<Page>
-	) {}
+	constructor(@InjectModel(Page.name) private pageModel: Model<Page>) {}
 
 	getLanding() {
 		return "This is landing";
+	}
+
+	// fetch landing page
+	async fetchLanding(): Promise<any> {
+		const name = "landing";
+		const result = await this.pageModel.findOne({
+			name: name,
+		});
+
+		if (result) {
+			return result;
+		} else {
+			return {
+				message: `No result found for '${name}'`,
+			};
+		}
+	}
+
+	// fetch landing page
+	async fetchSolutions(): Promise<any> {
+		const name = "solutions";
+		const result = await this.pageModel.findOne({
+			name: name,
+		});
+
+		if (result) {
+			return result;
+		} else {
+			return {
+				message: `No result found for '${name}'`,
+			};
+		}
 	}
 
 	getSolutions() {
