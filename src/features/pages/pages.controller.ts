@@ -1,6 +1,7 @@
 import { Body, Controller, Get, Post } from "@nestjs/common";
 import { PagesServices } from "./pages.services";
-import { CreatePortfolioDto } from "./dto/create-portfolio.dto";
+import { CreatePageDto } from "./dto/create-page.dto";
+// import { CreatePortfolioDto } from "./dto/create-portfolio.dto";
 
 @Controller("/pages")
 export class PagesController {
@@ -24,9 +25,10 @@ export class PagesController {
 		return this.pagesServices.getPortfolio();
 	}
 
-	@Post("/portfolio")
-	async createPortfolio(@Body() createPortfolioDto: CreatePortfolioDto) {
-		return this.pagesServices.createPortfolio(createPortfolioDto);
+	// core/portfolio
+	@Post()
+	async createPortfolio(@Body() createPortfolioDto: CreatePageDto) {
+		return this.pagesServices.createPage(createPortfolioDto);
 	}
 
 	// pages/about

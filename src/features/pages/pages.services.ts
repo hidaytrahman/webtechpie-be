@@ -1,14 +1,14 @@
 import { Injectable } from "@nestjs/common";
-import { portfolioList, solutionHighlights } from "./data";
-import { CreatePortfolioDto } from "./dto/create-portfolio.dto";
+import { solutionHighlights } from "./data";
 import { InjectModel } from "@nestjs/mongoose";
 import { Model } from "mongoose";
-import { Portoflio } from "./schema/portfolio.schema";
+import { CreatePageDto } from "./dto/create-page.dto";
+import { Page } from "./schema/portfolio.schema";
 
 @Injectable()
 export class PagesServices {
 	constructor(
-		@InjectModel(Portoflio.name) private portfolioModel: Model<Portoflio>
+		@InjectModel(Page.name) private pageModel: Model<Page>
 	) {}
 
 	getLanding() {
@@ -31,27 +31,17 @@ export class PagesServices {
 			pageId: "portfolio",
 			descriptions: "Our developer community",
 
-			list: portfolioList,
+			// list: portfolioList,
 		};
 	}
 
-
-	async createPortfolio(payload: CreatePortfolioDto): Promise<any> {
-		const data = new this.portfolioModel(payload);
+	async createPage(payload: CreatePageDto): Promise<any> {
+		const data = new this.pageModel(payload);
 		const result = await data.save();
 
 		return {
 			data: result,
-			message: `Portfolio '${result.name}' has been successfully created!`,
+			message: `Page '${result.name}' has been successfully created!`,
 		};
 	}
-	// createPortfolio() {
-	// 	return {
-	// 		title: "Portfolio",
-	// 		pageId: "portfolio",
-	// 		descriptions: "Our developer community",
-
-	// 		list: portfolioList,
-	// 	};
-	// }
 }

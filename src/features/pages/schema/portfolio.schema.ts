@@ -1,18 +1,15 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import { HydratedDocument } from "mongoose";
 
-export type PortoflioDocument = HydratedDocument<Portoflio>;
+export type PageoDocument = HydratedDocument<Page>;
 
 @Schema()
-export class Portoflio {
+export class Page {
 	@Prop({ required: true }) title: string;
 	@Prop({ required: true }) name: string;
 	@Prop({ required: true }) descriptions: string;
-	@Prop({ required: true }) type: string;
-	@Prop({ required: true }) url: string;
-	@Prop() github: string;
-	@Prop() avatar: string;
-	@Prop() technologies: [string];
+	@Prop() meta: [string];
+	@Prop() body: [string];
 }
 
-export const PortoflioSchema = SchemaFactory.createForClass(Portoflio);
+export const PageSchema = SchemaFactory.createForClass(Page);
