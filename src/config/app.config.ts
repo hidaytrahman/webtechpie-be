@@ -1,0 +1,4 @@
+export const APP_CONFIG = {
+	PREFIX: "api/v1/",
+	METHODS: "GET,HEAD,PUT,PATCH,POST,DELETE",
+};

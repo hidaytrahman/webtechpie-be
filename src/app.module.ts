@@ -1,5 +1,6 @@
 import { MiddlewareConsumer, Module, NestModule } from "@nestjs/common";
 import { MongooseModule } from "@nestjs/mongoose";
+import { APP_FILTER } from "@nestjs/core";
 import { ConfigModule } from "@nestjs/config";
 
 import { AppController } from "./app.controller";
@@ -10,10 +11,8 @@ import { LoggerMiddleware } from "./utils/middlewares/logger.middleware";
 import { PagesModule } from "./features/pages/pages.module";
 import { CoreModule } from "./features/core/core.module";
 import { PlanModule } from "./features/plan/plan.module";
-// import { Cat, CatSchema } from "./schemas/cat.schema";
 import { PlanServices } from "./features/plan/plan.services";
 import { Plan, PlanSchema } from "./features/plan/plan.schema";
-import { APP_FILTER } from "@nestjs/core";
 import { HttpExceptionFilter } from "./config/http-exception.filter";
 
 @Module({
