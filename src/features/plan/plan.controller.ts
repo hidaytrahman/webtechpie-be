@@ -8,15 +8,12 @@ export class PlanController {
 
 	@Get()
 	getPlan() {
-		return this.planServices.getPlans();
+		return this.planServices.fetchPlans();
 	}
 
+	// {baseURL}/plan/create
 	@Post("/create")
 	async createPlan(@Body() createUserDto: CreatePlanDto) {
 		return this.planServices.create(createUserDto);
 	}
-
-	// getPlan() {
-	// 	return this.planServices.getPlans();
-	// }
 }

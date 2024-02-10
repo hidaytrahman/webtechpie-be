@@ -16,23 +16,17 @@ export class PlanServices {
 		return planList;
 	}
 
-	async create(createPlanDto: CreatePlanDto): Promise<any> {
-		console.log(' createPlanDto ', createPlanDto);
-
-		const createdPlan = new this.planModel(createPlanDto);
-
-		console.log({createdPlan});
-
-		const result = await createdPlan.save();
-		console.log("mnyss result", result)
+	async create(payload: CreatePlanDto): Promise<any> {
+		const data = new this.planModel(payload);
+		const result = await data.save();
 
 		return {
 			data: result,
-			message: `Plan '${createPlanDto.name}' has been successfully created!`,
+			message: `Plan '${result.name}' has been successfully created!`,
 		};
 	}
 
-	async findAll(): Promise<Plan[]> {
+	async fetchPlans(): Promise<Plan[]> {
 		return this.planModel.find().exec();
 	}
 }

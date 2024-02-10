@@ -31,10 +31,8 @@ import { HttpExceptionFilter } from "./config/http-exception.filter";
 				useFactory: () => {
 					const schema = PlanSchema;
 					schema.pre("save", function () {
-						console.log("Hello from pre save");
+						// console.log("Hello from pre save");
 					});
-
-					console.log(process.env.DATABSE_URL);
 					return schema;
 				},
 			},
