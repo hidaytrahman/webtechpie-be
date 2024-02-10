@@ -2,13 +2,13 @@ import { Injectable } from "@nestjs/common";
 import { planList } from "./data";
 import { InjectConnection, InjectModel } from "@nestjs/mongoose";
 import { Connection, Model } from "mongoose";
-import { Cat } from "src/schemas/cat.schema";
-import { CreateCatDto } from "./create-cat.dto";
+import { Plan } from "./plan.schema";
+import { CreatePlanDto } from "./create-plan.dto";
 
 @Injectable()
 export class PlanServices {
 	constructor(
-		@InjectModel(Cat.name) private catModel: Model<Cat>,
+		@InjectModel(Plan.name) private planModel: Model<Plan>,
 		@InjectConnection() private connection: Connection
 	) {}
 
@@ -16,14 +16,23 @@ export class PlanServices {
 		return planList;
 	}
 
-	async create(createCatDto: CreateCatDto): Promise<Cat> {
-		console.log(' createCatDto ', createCatDto);
+	async create(createPlanDto: CreatePlanDto): Promise<any> {
+		console.log(' createPlanDto ', createPlanDto);
 
-		const createdCat = new this.catModel(createCatDto);
-		return createdCat.save();
+		const createdPlan = new this.planModel(createPlanDto);
+
+		console.log({createdPlan});
+
+		const result = await createdPlan.save();
+		console.log("mnyss result", result)
+
+		return {
+			data: result,
+			message: `Plan '${createPlanDto.name}' has been successfully created!`,
+		};
 	}
 
-	async findAll(): Promise<Cat[]> {
-		return this.catModel.find().exec();
+	async findAll(): Promise<Plan[]> {
+		return this.planModel.find().exec();
 	}
 }

@@ -1,5 +1,6 @@
 import { Body, Controller, Get, Post } from "@nestjs/common";
 import { PlanServices } from "./plan.services";
+import { CreatePlanDto } from "./create-plan.dto";
 
 @Controller("plan") // {baseURL}/plan
 export class PlanController {
@@ -11,14 +12,8 @@ export class PlanController {
 	}
 
 	@Post("/create")
-	async createPlan(@Body() body) {
-		console.log({body})
-		this.planServices.create(body);
-		// if (result.affected == 0) {
-		// 	throw new NotFoundException("No se ha podido crear el plan");
-		// } else {
-		// 	return "Se ha creado correctamente el plan";
-		// }
+	async createPlan(@Body() createUserDto: CreatePlanDto) {
+		return this.planServices.create(createUserDto);
 	}
 
 	// getPlan() {
