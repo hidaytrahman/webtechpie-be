@@ -19,4 +19,9 @@ export class CoreController {
 	async createPortfolio(@Body() createPortfolioDto: CreatePortfolioDto) {
 		return this.coreServices.createPortfolio(createPortfolioDto);
 	}
+
+	@Get("/portfolio")
+	async getPortfolio() {
+		return this.coreServices.fetchPortfolio();
+	}
 }

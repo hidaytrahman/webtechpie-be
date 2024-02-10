@@ -25,4 +25,8 @@ export class CoresServices {
 			message: `Portfolio '${result.name}' has been successfully created!`,
 		};
 	}
+
+	async fetchPortfolio(): Promise<Portoflio[]> {
+		return this.portfolioModel.find().exec();
+	}
 }
