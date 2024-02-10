@@ -1,5 +1,6 @@
 import { MiddlewareConsumer, Module, NestModule } from "@nestjs/common";
 import { MongooseModule } from "@nestjs/mongoose";
+import { ConfigModule } from "@nestjs/config";
 
 import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
@@ -14,13 +15,19 @@ import { PlanServices } from "./features/plan/plan.services";
 
 @Module({
 	imports: [
+		// env variables
+		ConfigModule.forRoot({
+			isGlobal: true,
+		}),
+
 		SolutionsModule,
 		TeamsModule,
 		PagesModule,
 		CoreModule,
 		PlanModule,
 
-		MongooseModule.forRoot("mongodb://localhost/nest"),
+		// database config
+		MongooseModule.forRoot(`${process.env.DATABSE_URL}`),
 		MongooseModule.forFeatureAsync([
 			{
 				name: Cat.name,
@@ -29,6 +36,8 @@ import { PlanServices } from "./features/plan/plan.services";
 					schema.pre("save", function () {
 						console.log("Hello from pre save");
 					});
+
+					console.log(process.env.DATABSE_URL);
 					return schema;
 				},
 			},

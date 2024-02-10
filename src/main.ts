@@ -4,8 +4,11 @@ import { allowedOrigins } from "./utils/data";
 
 async function bootstrap() {
 	const app = await NestFactory.create(AppModule);
+
+	// base url prefix config
 	app.setGlobalPrefix("api/v1/");
 
+	// cors enable
 	app.enableCors({
 		origin: allowedOrigins,
 		methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
