@@ -48,16 +48,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/api/v1/pages/solutions",
-									"protocol": "http",
+									"raw": "{{baseURL}}pages/solutions",
 									"host": [
-										"localhost"
+										"{{baseURL}}pages"
 									],
-									"port": "8080",
 									"path": [
-										"api",
-										"v1",
-										"pages",
 										"solutions"
 									]
 								}
@@ -105,84 +100,6 @@
 					]
 				},
 				{
-					"name": "Get Pages/navigations",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{baseURL}}pages/navigations",
-							"host": [
-								"{{baseURL}}pages"
-							],
-							"path": [
-								"navigations"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Get Pages/navigations",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8080/api/v1/pages/navigations",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"api",
-										"v1",
-										"pages",
-										"navigations"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Vary",
-									"value": "Origin"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "515"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"203-SE0BJEXqTn/LYyBea7dqMZ36zp4\""
-								},
-								{
-									"key": "Date",
-									"value": "Sat, 03 Feb 2024 19:53:37 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"primaryNavs\": [\n        {\n            \"id\": 1,\n            \"title\": \"Home\",\n            \"name\": \"home\",\n            \"link\": \"/\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"About Us\",\n            \"name\": \"about\",\n            \"link\": \"/about\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Solutions\",\n            \"name\": \"solutions\",\n            \"link\": \"/products\"\n        }\n    ],\n    \"footerNavs\": [\n        {\n            \"id\": 1,\n            \"title\": \"Home\",\n            \"name\": \"home\",\n            \"link\": \"/\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"About Us\",\n            \"name\": \"about\",\n            \"link\": \"/about\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Solutions\",\n            \"name\": \"solutions\",\n            \"link\": \"/products\"\n        }\n    ],\n    \"socialMediaList\": [\n        {\n            \"icon\": \"fa-facebook-square\",\n            \"link\": \"#\"\n        },\n        {\n            \"icon\": \"fa-twitter\",\n            \"link\": \"#\"\n        },\n        {\n            \"icon\": \"fa-google-plus-g\",\n            \"link\": \"#\"\n        }\n    ]\n}"
-						}
-					]
-				},
-				{
 					"name": "Get Pages/portfolio",
 					"request": {
 						"method": "GET",
@@ -204,16 +121,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/api/v1/pages/portfolio",
-									"protocol": "http",
+									"raw": "{{baseURL}}pages/portfolio",
 									"host": [
-										"localhost"
+										"{{baseURL}}pages"
 									],
-									"port": "8080",
 									"path": [
-										"api",
-										"v1",
-										"pages",
 										"portfolio"
 									]
 								}
@@ -287,16 +199,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/api/v1/teams/members",
-									"protocol": "http",
+									"raw": "{{baseURL}}teams/members",
 									"host": [
-										"localhost"
+										"{{baseURL}}teams"
 									],
-									"port": "8080",
 									"path": [
-										"api",
-										"v1",
-										"teams",
 										"members"
 									]
 								}
@@ -340,6 +247,168 @@
 							],
 							"cookie": [],
 							"body": "[\n    {\n        \"name\": \"Hidayt Rahman\",\n        \"role\": \"UI Engineer / UX Research\",\n        \"avatar\": \"https://avatars.githubusercontent.com/u/9712111?v=4\"\n    },\n    {\n        \"name\": \"Rahul Anand\",\n        \"role\": \"Fullstack Engineer\",\n        \"avatar\": \"https://i1.sndcdn.com/avatars-000105338773-dfay5o-t500x500.jpg\"\n    },\n    {\n        \"name\": \"Pradeep Gupta\",\n        \"role\": \"AEM Expert\",\n        \"avatar\": \"/images/default-coder-male.png\"\n    },\n    {\n        \"name\": \"Subhash Thapa\",\n        \"role\": \"UI/UX Designer\",\n        \"avatar\": \"https://mir-s3-cdn-cf.behance.net/user/230/1371d166625967.63c435e8c99d9.jpg\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "core",
+			"item": [
+				{
+					"name": "Get Navigations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}core/navigations",
+							"host": [
+								"{{baseURL}}core"
+							],
+							"path": [
+								"navigations"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Navigations",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}core/navigations",
+									"host": [
+										"{{baseURL}}core"
+									],
+									"path": [
+										"navigations"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "515"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"203-SE0BJEXqTn/LYyBea7dqMZ36zp4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Feb 2024 11:47:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"primaryNavs\": [\n        {\n            \"id\": 1,\n            \"title\": \"Home\",\n            \"name\": \"home\",\n            \"link\": \"/\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"About Us\",\n            \"name\": \"about\",\n            \"link\": \"/about\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Solutions\",\n            \"name\": \"solutions\",\n            \"link\": \"/products\"\n        }\n    ],\n    \"footerNavs\": [\n        {\n            \"id\": 1,\n            \"title\": \"Home\",\n            \"name\": \"home\",\n            \"link\": \"/\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"About Us\",\n            \"name\": \"about\",\n            \"link\": \"/about\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Solutions\",\n            \"name\": \"solutions\",\n            \"link\": \"/products\"\n        }\n    ],\n    \"socialMediaList\": [\n        {\n            \"icon\": \"fa-facebook-square\",\n            \"link\": \"#\"\n        },\n        {\n            \"icon\": \"fa-twitter\",\n            \"link\": \"#\"\n        },\n        {\n            \"icon\": \"fa-google-plus-g\",\n            \"link\": \"#\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "plan",
+			"item": [
+				{
+					"name": "Get Plan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"hidayt\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}create",
+							"host": [
+								"{{baseURL}}create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Navigations",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}core/navigations",
+									"host": [
+										"{{baseURL}}core"
+									],
+									"path": [
+										"navigations"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "515"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"203-SE0BJEXqTn/LYyBea7dqMZ36zp4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Feb 2024 11:47:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"primaryNavs\": [\n        {\n            \"id\": 1,\n            \"title\": \"Home\",\n            \"name\": \"home\",\n            \"link\": \"/\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"About Us\",\n            \"name\": \"about\",\n            \"link\": \"/about\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Solutions\",\n            \"name\": \"solutions\",\n            \"link\": \"/products\"\n        }\n    ],\n    \"footerNavs\": [\n        {\n            \"id\": 1,\n            \"title\": \"Home\",\n            \"name\": \"home\",\n            \"link\": \"/\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"About Us\",\n            \"name\": \"about\",\n            \"link\": \"/about\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Solutions\",\n            \"name\": \"solutions\",\n            \"link\": \"/products\"\n        }\n    ],\n    \"socialMediaList\": [\n        {\n            \"icon\": \"fa-facebook-square\",\n            \"link\": \"#\"\n        },\n        {\n            \"icon\": \"fa-twitter\",\n            \"link\": \"#\"\n        },\n        {\n            \"icon\": \"fa-google-plus-g\",\n            \"link\": \"#\"\n        }\n    ]\n}"
 						}
 					]
 				}
@@ -465,7 +534,7 @@
 	"variable": [
 		{
 			"key": "baseURL",
-			"value": "http://localhost:8080/api/v1/",
+			"value": "http://webtechpie.io:8080/api/v1/",
 			"type": "string"
 		}
 	]
