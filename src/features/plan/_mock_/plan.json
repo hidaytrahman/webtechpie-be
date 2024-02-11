@@ -1,0 +1,42 @@
+[
+    {
+        "_id": "65c7631262af48957b66f9d9",
+        "title": "WhatsApp",
+        "name": "basic",
+        "descriptions": "We do regular sessions on MERN stacks and Live projects / Ideas",
+        "type": "limited",
+        "price": 0,
+        "isPremium": false,
+        "__v": 0
+    },
+    {
+        "_id": "65c7647b63ed09f1b4a96dd7",
+        "title": "Youtube",
+        "name": "basic",
+        "descriptions": "Get connected with our all Live Sessions",
+        "type": "always",
+        "price": 0,
+        "isPremium": false,
+        "__v": 0
+    },
+    {
+        "_id": "65c765e1a53fea3f0657e6b1",
+        "title": "Pro",
+        "name": "pro",
+        "descriptions": "Currently, We are working on it, You will get update in the WhatsApp group :)",
+        "type": "always",
+        "price": 0,
+        "isPremium": true,
+        "__v": 0
+    },
+    {
+        "_id": "65c76c41ff144d287268558e",
+        "title": "Pro",
+        "name": "pro",
+        "descriptions": "Currently, We are working on it, You will get update in the WhatsApp group :)",
+        "type": "always",
+        "price": 0,
+        "isPremium": true,
+        "__v": 0
+    }
+]

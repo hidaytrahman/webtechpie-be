@@ -10,6 +10,175 @@
 			"name": "pages",
 			"item": [
 				{
+					"name": "portfolio",
+					"item": [
+						{
+							"name": "Get Pages/portfolio",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}pages/portfolio",
+									"host": [
+										"{{baseURL}}pages"
+									],
+									"path": [
+										"portfolio"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Pages/portfolio",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseURL}}pages/portfolio",
+											"host": [
+												"{{baseURL}}pages"
+											],
+											"path": [
+												"portfolio"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "946"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3b2-xbr4am2T6b47pZSooxyrxU4qnqY\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 03 Feb 2024 19:53:18 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"title\": \"Portfolio\",\n    \"pageId\": \"portfolio\",\n    \"descriptions\": \"Our developer community\",\n    \"list\": [\n        {\n            \"id\": 1,\n            \"title\": \"codeeng\",\n            \"description\": \"Basic configuration of the code environment needed for your project or new machine.\",\n            \"url\": \"https://codeeng.vercel.app/\",\n            \"avatar\": \"\",\n            \"technologies\": []\n        },\n        {\n            \"id\": 2,\n            \"title\": \"react-carbonui\",\n            \"description\": \"A carbon copy UI to show the web page based on the traditional view\",\n            \"url\": \"https://hidaytrahman.github.io/react-carbonui/\",\n            \"avatar\": \"\",\n            \"github\": \"https://github.com/hidaytrahman/react-carbonui\",\n            \"technologies\": []\n        },\n        {\n            \"id\": 3,\n            \"title\": \"preapi\",\n            \"description\": \"A very simple API prototype file based database\",\n            \"url\": \"https://preapi.vercel.app/\",\n            \"avatar\": \"\",\n            \"github\": \"https://github.com/hidaytrahman/preapi\",\n            \"technologies\": []\n        },\n        {\n            \"id\": 4,\n            \"title\": \"chepo\",\n            \"description\": \"Easiest way to get mock data\",\n            \"url\": \"https://hidaytrahman.github.io/chepo/\",\n            \"avatar\": \"\",\n            \"github\": \"https://github.com/hidaytrahman/chepo\",\n            \"technologies\": []\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Create a Portfolio",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Codeeng\",\n    \"name\": \"codeeng\",\n    \"descriptions\": \"Basic configuration of the code environment needed for your project or new machine.\",\n    \"url\": \"https://codeeng.vercel.app/\",\n    \"type\": \"DEV_COMMUNITY\",\n    \"technologies\": [\"nextjs\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}pages/portfolio",
+									"host": [
+										"{{baseURL}}pages"
+									],
+									"path": [
+										"portfolio"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create a Portfolio",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"Codeeng\",\n    \"name\": \"codeeng\",\n    \"descriptions\": \"Basic configuration of the code environment needed for your project or new machine.\",\n    \"url\": \"https://codeeng.vercel.app/\",\n    \"type\": \"DEV_COMMUNITY\",\n    \"technologies\": [\"nextjs\"]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}pages/portfolio",
+											"host": [
+												"{{baseURL}}pages"
+											],
+											"path": [
+												"portfolio"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "335"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"14f-p/1Nki4ckqU9J7QX+wZW4gdI8Qg\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 10 Feb 2024 12:45:35 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"title\": \"Codeeng\",\n        \"name\": \"codeeng\",\n        \"descriptions\": \"Basic configuration of the code environment needed for your project or new machine.\",\n        \"type\": \"DEV_COMMUNITY\",\n        \"url\": \"https://codeeng.vercel.app/\",\n        \"technologies\": [\n            \"nextjs\"\n        ],\n        \"_id\": \"65c76fefa7576b2dbcc283ef\",\n        \"__v\": 0\n    },\n    \"message\": \"Portfolio 'codeeng' has been successfully created!\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
 					"name": "Get Pages/Landing",
 					"request": {
 						"method": "GET",
@@ -100,38 +269,56 @@
 					]
 				},
 				{
-					"name": "Get Pages/portfolio",
+					"name": "Create a Page",
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Our Solutions\",\n    \"name\": \"solutions\",\n    \"descriptions\": \"Coding is a form of creative expression. You can turn your ideas into reality by building software and applications that solve real-world problems.\",\n    \"meta\": [{\n        \"name\": \"description\",\n        \"content\": \"Get trained by subject matter expert's in Webtechpie | Web App for your business\"\n    },\n    {\n        \"name\": \"keywords\",\n        \"content\": \"solutions, webtechpie solutions, webtechpie portfolio, webtechpie training, online training service, offline training, tech training, live sessions\"\n    }],\n    \"body\": [\n        {\n            \"title\": \"\",\n            \"type\": \"list\",\n            \"content\": \"Get trained by subject matter expert's, Live projects from scratch, Open discussions, Collborative teams, Mock Interviews, On demand training (Tech only)\",\n            \"controls\": [\n                {\n                    \"title\": \"Access Now\",\n                    \"link\": \"/solutions\",\n                    \"type\": \"button\",\n                    \"props\": [\n                        {\n                            \"aria-label\": \"\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "{{baseURL}}pages/portfolio",
+							"raw": "{{baseURL}}pages/",
 							"host": [
 								"{{baseURL}}pages"
 							],
 							"path": [
-								"portfolio"
+								""
 							]
 						}
 					},
 					"response": [
 						{
-							"name": "Get Pages/portfolio",
+							"name": "Create a Page",
 							"originalRequest": {
-								"method": "GET",
+								"method": "POST",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Our Solutions\",\n    \"name\": \"solutions\",\n    \"descriptions\": \"Coding is a form of creative expression. You can turn your ideas into reality by building software and applications that solve real-world problems.\",\n    \"meta\": [{\n        \"name\": \"description\",\n        \"content\": \"Get trained by subject matter expert's in Webtechpie | Web App for your business\"\n    },\n    {\n        \"name\": \"keywords\",\n        \"content\": \"solutions, webtechpie solutions, webtechpie portfolio, webtechpie training, online training service, offline training, tech training, live sessions\"\n    }],\n    \"body\": [\n        {\n            \"title\": \"\",\n            \"type\": \"list\",\n            \"content\": \"Get trained by subject matter expert's, Live projects from scratch, Open discussions, Collborative teams, Mock Interviews, On demand training (Tech only)\",\n            \"controls\": [\n                {\n                    \"title\": \"Access Now\",\n                    \"link\": \"/solutions\",\n                    \"type\": \"button\",\n                    \"props\": [\n                        {\n                            \"aria-label\": \"\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
-									"raw": "{{baseURL}}pages/portfolio",
+									"raw": "{{baseURL}}pages/",
 									"host": [
 										"{{baseURL}}pages"
 									],
 									"path": [
-										"portfolio"
+										""
 									]
 								}
 							},
-							"status": "OK",
-							"code": 200,
+							"status": "Created",
+							"code": 201,
 							"_postman_previewlanguage": "json",
 							"header": [
 								{
@@ -148,15 +335,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "946"
+									"value": "926"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"3b2-xbr4am2T6b47pZSooxyrxU4qnqY\""
+									"value": "W/\"39e-74AAhF9AcckG5YpSjVMi2dp06vU\""
 								},
 								{
 									"key": "Date",
-									"value": "Sat, 03 Feb 2024 19:53:18 GMT"
+									"value": "Sat, 10 Feb 2024 18:15:17 GMT"
 								},
 								{
 									"key": "Connection",
@@ -168,7 +355,536 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"title\": \"Portfolio\",\n    \"pageId\": \"portfolio\",\n    \"descriptions\": \"Our developer community\",\n    \"list\": [\n        {\n            \"id\": 1,\n            \"title\": \"codeeng\",\n            \"description\": \"Basic configuration of the code environment needed for your project or new machine.\",\n            \"url\": \"https://codeeng.vercel.app/\",\n            \"avatar\": \"\",\n            \"technologies\": []\n        },\n        {\n            \"id\": 2,\n            \"title\": \"react-carbonui\",\n            \"description\": \"A carbon copy UI to show the web page based on the traditional view\",\n            \"url\": \"https://hidaytrahman.github.io/react-carbonui/\",\n            \"avatar\": \"\",\n            \"github\": \"https://github.com/hidaytrahman/react-carbonui\",\n            \"technologies\": []\n        },\n        {\n            \"id\": 3,\n            \"title\": \"preapi\",\n            \"description\": \"A very simple API prototype file based database\",\n            \"url\": \"https://preapi.vercel.app/\",\n            \"avatar\": \"\",\n            \"github\": \"https://github.com/hidaytrahman/preapi\",\n            \"technologies\": []\n        },\n        {\n            \"id\": 4,\n            \"title\": \"chepo\",\n            \"description\": \"Easiest way to get mock data\",\n            \"url\": \"https://hidaytrahman.github.io/chepo/\",\n            \"avatar\": \"\",\n            \"github\": \"https://github.com/hidaytrahman/chepo\",\n            \"technologies\": []\n        }\n    ]\n}"
+							"body": "{\n    \"data\": {\n        \"title\": \"Our Solutions\",\n        \"name\": \"solutions\",\n        \"descriptions\": \"Coding is a form of creative expression. You can turn your ideas into reality by building software and applications that solve real-world problems.\",\n        \"meta\": [\n            {\n                \"name\": \"description\",\n                \"content\": \"Get trained by subject matter expert's in Webtechpie | Web App for your business\"\n            },\n            {\n                \"name\": \"keywords\",\n                \"content\": \"solutions, webtechpie solutions, webtechpie portfolio, webtechpie training, online training service, offline training, tech training, live sessions\"\n            }\n        ],\n        \"body\": [\n            {\n                \"title\": \"\",\n                \"type\": \"list\",\n                \"content\": \"Get trained by subject matter expert's, Live projects from scratch, Open discussions, Collborative teams, Mock Interviews, On demand training (Tech only)\",\n                \"controls\": [\n                    {\n                        \"title\": \"Access Now\",\n                        \"link\": \"/solutions\",\n                        \"type\": \"button\",\n                        \"props\": [\n                            {\n                                \"aria-label\": \"\"\n                            }\n                        ]\n                    }\n                ]\n            }\n        ],\n        \"_id\": \"65c7bd353173aa9886884d46\",\n        \"__v\": 0\n    },\n    \"message\": \"Page 'solutions' has been successfully created!\"\n}"
+						},
+						{
+							"name": "Create a Page | AlreadtyExists",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Our Solutions\",\n    \"name\": \"solutions\",\n    \"descriptions\": \"Coding is a form of creative expression. You can turn your ideas into reality by building software and applications that solve real-world problems.\",\n    \"meta\": [{\n        \"name\": \"description\",\n        \"content\": \"Get trained by subject matter expert's in Webtechpie | Web App for your business\"\n    },\n    {\n        \"name\": \"keywords\",\n        \"content\": \"solutions, webtechpie solutions, webtechpie portfolio, webtechpie training, online training service, offline training, tech training, live sessions\"\n    }],\n    \"body\": [\n        {\n            \"title\": \"\",\n            \"type\": \"list\",\n            \"content\": \"Get trained by subject matter expert's, Live projects from scratch, Open discussions, Collborative teams, Mock Interviews, On demand training (Tech only)\",\n            \"controls\": [\n                {\n                    \"title\": \"Access Now\",\n                    \"link\": \"/solutions\",\n                    \"type\": \"button\",\n                    \"props\": [\n                        {\n                            \"aria-label\": \"\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}pages/",
+									"host": [
+										"{{baseURL}}pages"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "49"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"31-yBstyai+cCoZfnW5J7Ad9jtfXBw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Feb 2024 18:15:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Page 'solutions' is already exists!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create a Landing Page",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Webtechpie | Unite. Code. Inspire\",\n    \"name\": \"landing\",\n    \"descriptions\": \"Webtechpie | Unite. Code. Inspire\",\n    \"meta\": [{\n        \"name\": \"description\",\n        \"content\": \"Welcome to our vibrant and inclusive open source community dedicated to pushing the boundaries of web development. We are a passionate group of developers, designers, and innovators who believe in the power of open collaboration\"\n    },\n    {\n        \"name\": \"keywords\",\n        \"content\": \"Open Source Community, Collaborative Coding, Web Solutions, Community-driven Development, webtechpie\"\n    }],\n    \"body\": [\n        {\n            \"title\": \"Coding Together, Openly Forever\",\n            \"type\": \"section\",\n            \"content\": \"Welcome to our vibrant and inclusive open source community dedicated to pushing the boundaries of web development. We are a passionate group of developers, designers, and innovators who believe in the power of open collaboration.\",\n            \"controls\": [\n                {\n                    \"title\": \"Explore\",\n                    \"link\": \"/community\",\n                    \"type\": \"button\",\n                    \"props\": [\n                        {\n                            \"variant\": \"primary\"\n                        }\n                    ]\n                },\n                {\n                    \"title\": \"Our Expertise\",\n                    \"link\": \"/solutions\",\n                    \"type\": \"button\",\n                    \"props\": [\n                        {\n                            \"aria-label\": \"\",\n                            \"variant\": \"secondary\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"title\": \"Learn together\",\n            \"type\": \"section\",\n            \"content\": \"Are you ready to unlock the world of coding and programming? Whether you're a complete beginner or an experienced developer looking to expand your skills, our 'Learn Code and Programming' section is your gateway to the exciting realm of computer programming.\",\n            \"controls\": [],\n            \"list\": \"Maximize productivity and growth, Endless Opportunities and Problem Solving, Learn the top techniques\"\n        },\n        {\n            \"title\": \"Build Together\",\n            \"type\": \"section\",\n            \"content\": \"coding is a superpower. It's the language of computers, and by learning to code, you gain the ability to create software, websites, mobile apps, and more\",\n            \"controls\": []\n        },\n        {\n            \"title\": \"Explore\",\n            \"type\": \"section\",\n            \"content\": \"Whether you dream of becoming a software developer, building your own startup, or simply understanding the digital world better, learning to code is a valuable skill. It's a journey that can lead to a fulfilling career and endless possibilities.\",\n            \"list\": \"Hands-on coding projects that allow you to apply what you've learned in real-world scenarios. Build web applications, games, and more., Connect with a vibrant community of fellow learners and experienced developers. Share your progress, seek help, and collaborate on coding projects., Coding is not just a skill; it's a superpower. Join us and become a coding superhero today!\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}pages/",
+							"host": [
+								"{{baseURL}}pages"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create a Page | AlreadtyExists",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Our Solutions\",\n    \"name\": \"solutions\",\n    \"descriptions\": \"Coding is a form of creative expression. You can turn your ideas into reality by building software and applications that solve real-world problems.\",\n    \"meta\": [{\n        \"name\": \"description\",\n        \"content\": \"Get trained by subject matter expert's in Webtechpie | Web App for your business\"\n    },\n    {\n        \"name\": \"keywords\",\n        \"content\": \"solutions, webtechpie solutions, webtechpie portfolio, webtechpie training, online training service, offline training, tech training, live sessions\"\n    }],\n    \"body\": [\n        {\n            \"title\": \"\",\n            \"type\": \"list\",\n            \"content\": \"Get trained by subject matter expert's, Live projects from scratch, Open discussions, Collborative teams, Mock Interviews, On demand training (Tech only)\",\n            \"controls\": [\n                {\n                    \"title\": \"Access Now\",\n                    \"link\": \"/solutions\",\n                    \"type\": \"button\",\n                    \"props\": [\n                        {\n                            \"aria-label\": \"\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}pages/",
+									"host": [
+										"{{baseURL}}pages"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "49"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"31-yBstyai+cCoZfnW5J7Ad9jtfXBw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Feb 2024 18:15:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Page 'solutions' is already exists!\"\n}"
+						},
+						{
+							"name": "Create a Landing Page",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Webtechpie | Unite. Code. Inspire\",\n    \"name\": \"landing\",\n    \"descriptions\": \"Webtechpie | Unite. Code. Inspire\",\n    \"meta\": [{\n        \"name\": \"description\",\n        \"content\": \"Welcome to our vibrant and inclusive open source community dedicated to pushing the boundaries of web development. We are a passionate group of developers, designers, and innovators who believe in the power of open collaboration\"\n    },\n    {\n        \"name\": \"keywords\",\n        \"content\": \"Open Source Community, Collaborative Coding, Web Solutions, Community-driven Development, webtechpie\"\n    }],\n    \"body\": [\n        {\n            \"title\": \"Coding Together, Openly Forever\",\n            \"type\": \"section\",\n            \"content\": \"Welcome to our vibrant and inclusive open source community dedicated to pushing the boundaries of web development. We are a passionate group of developers, designers, and innovators who believe in the power of open collaboration.\",\n            \"controls\": [\n                {\n                    \"title\": \"Explore\",\n                    \"link\": \"/community\",\n                    \"type\": \"button\",\n                    \"props\": [\n                        {\n                            \"variant\": \"primary\"\n                        }\n                    ]\n                },\n                {\n                    \"title\": \"Our Expertise\",\n                    \"link\": \"/solutions\",\n                    \"type\": \"button\",\n                    \"props\": [\n                        {\n                            \"aria-label\": \"\",\n                            \"variant\": \"secondary\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"title\": \"Learn together\",\n            \"type\": \"section\",\n            \"content\": \"Are you ready to unlock the world of coding and programming? Whether you're a complete beginner or an experienced developer looking to expand your skills, our 'Learn Code and Programming' section is your gateway to the exciting realm of computer programming.\",\n            \"controls\": [],\n            \"list\": \"Maximize productivity and growth, Endless Opportunities and Problem Solving, Learn the top techniques\"\n        },\n        {\n            \"title\": \"Build Together\",\n            \"type\": \"section\",\n            \"content\": \"coding is a superpower. It's the language of computers, and by learning to code, you gain the ability to create software, websites, mobile apps, and more\",\n            \"controls\": []\n        },\n        {\n            \"title\": \"Explore\",\n            \"type\": \"section\",\n            \"content\": \"Whether you dream of becoming a software developer, building your own startup, or simply understanding the digital world better, learning to code is a valuable skill. It's a journey that can lead to a fulfilling career and endless possibilities.\",\n            \"list\": \"Hands-on coding projects that allow you to apply what you've learned in real-world scenarios. Build web applications, games, and more., Connect with a vibrant community of fellow learners and experienced developers. Share your progress, seek help, and collaborate on coding projects., Coding is not just a skill; it's a superpower. Join us and become a coding superhero today!\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}pages/",
+									"host": [
+										"{{baseURL}}pages"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2497"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9c1-F8VFVzMNX8+hKgdLhJqqhibLXmk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Feb 2024 18:33:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"title\": \"Webtechpie | Unite. Code. Inspire\",\n        \"name\": \"landing\",\n        \"descriptions\": \"Webtechpie | Unite. Code. Inspire\",\n        \"meta\": [\n            {\n                \"name\": \"description\",\n                \"content\": \"Welcome to our vibrant and inclusive open source community dedicated to pushing the boundaries of web development. We are a passionate group of developers, designers, and innovators who believe in the power of open collaboration\"\n            },\n            {\n                \"name\": \"keywords\",\n                \"content\": \"Open Source Community, Collaborative Coding, Web Solutions, Community-driven Development, webtechpie\"\n            }\n        ],\n        \"body\": [\n            {\n                \"title\": \"Coding Together, Openly Forever\",\n                \"type\": \"section\",\n                \"content\": \"Welcome to our vibrant and inclusive open source community dedicated to pushing the boundaries of web development. We are a passionate group of developers, designers, and innovators who believe in the power of open collaboration.\",\n                \"controls\": [\n                    {\n                        \"title\": \"Explore\",\n                        \"link\": \"/community\",\n                        \"type\": \"button\",\n                        \"props\": [\n                            {\n                                \"variant\": \"primary\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Our Expertise\",\n                        \"link\": \"/solutions\",\n                        \"type\": \"button\",\n                        \"props\": [\n                            {\n                                \"aria-label\": \"\",\n                                \"variant\": \"secondary\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            {\n                \"title\": \"Learn together\",\n                \"type\": \"section\",\n                \"content\": \"Are you ready to unlock the world of coding and programming? Whether you're a complete beginner or an experienced developer looking to expand your skills, our 'Learn Code and Programming' section is your gateway to the exciting realm of computer programming.\",\n                \"controls\": [],\n                \"list\": \"Maximize productivity and growth, Endless Opportunities and Problem Solving, Learn the top techniques\"\n            },\n            {\n                \"title\": \"Build Together\",\n                \"type\": \"section\",\n                \"content\": \"coding is a superpower. It's the language of computers, and by learning to code, you gain the ability to create software, websites, mobile apps, and more\",\n                \"controls\": []\n            },\n            {\n                \"title\": \"Explore\",\n                \"type\": \"section\",\n                \"content\": \"Whether you dream of becoming a software developer, building your own startup, or simply understanding the digital world better, learning to code is a valuable skill. It's a journey that can lead to a fulfilling career and endless possibilities.\",\n                \"list\": \"Hands-on coding projects that allow you to apply what you've learned in real-world scenarios. Build web applications, games, and more., Connect with a vibrant community of fellow learners and experienced developers. Share your progress, seek help, and collaborate on coding projects., Coding is not just a skill; it's a superpower. Join us and become a coding superhero today!\"\n            }\n        ],\n        \"_id\": \"65c7c1893173aa9886884d54\",\n        \"__v\": 0\n    },\n    \"message\": \"Page 'landing' has been successfully created!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create a Community Page",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Community\",\n    \"name\": \"community\",\n    \"descriptions\": \"Our developer community is growing every day. Join us to learn, share your knowledge and get involved in the development\",\n    \"meta\": [{\n        \"name\": \"description\",\n        \"content\": \"Our developer community is growing every day. Join us to learn, share your knowledge and get involved in the development\"\n    },\n    {\n        \"name\": \"keywords\",\n        \"content\": \"Open Source Community, Collaborative Coding, Web Solutions, Community-driven Development, webtechpie\"\n    }],\n    \"body\": [\n        {\n            \"title\": \"Open Source, Team\",\n            \"type\": \"section\",\n            \"content\": \"In today's digital age, coding is a superpower. It's the language of computers, and by learning to code, you gain the ability to create software, websites, mobile apps, and more. Here are some compelling reasons to start your coding journey with us:\",\n            \"controls\": [\n                {\n                    \"title\": \"Access Now\",\n                    \"link\": \"/solutions\",\n                    \"type\": \"button\",\n                    \"props\": [\n                        {\n                            \"variant\": \"primary\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}pages/",
+							"host": [
+								"{{baseURL}}pages"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create a Page | AlreadtyExists",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Our Solutions\",\n    \"name\": \"solutions\",\n    \"descriptions\": \"Coding is a form of creative expression. You can turn your ideas into reality by building software and applications that solve real-world problems.\",\n    \"meta\": [{\n        \"name\": \"description\",\n        \"content\": \"Get trained by subject matter expert's in Webtechpie | Web App for your business\"\n    },\n    {\n        \"name\": \"keywords\",\n        \"content\": \"solutions, webtechpie solutions, webtechpie portfolio, webtechpie training, online training service, offline training, tech training, live sessions\"\n    }],\n    \"body\": [\n        {\n            \"title\": \"\",\n            \"type\": \"list\",\n            \"content\": \"Get trained by subject matter expert's, Live projects from scratch, Open discussions, Collborative teams, Mock Interviews, On demand training (Tech only)\",\n            \"controls\": [\n                {\n                    \"title\": \"Access Now\",\n                    \"link\": \"/solutions\",\n                    \"type\": \"button\",\n                    \"props\": [\n                        {\n                            \"aria-label\": \"\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}pages/",
+									"host": [
+										"{{baseURL}}pages"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "49"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"31-yBstyai+cCoZfnW5J7Ad9jtfXBw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Feb 2024 18:15:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Page 'solutions' is already exists!\"\n}"
+						},
+						{
+							"name": "Create a Community Page",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Community\",\n    \"name\": \"community\",\n    \"descriptions\": \"Our developer community is growing every day. Join us to learn, share your knowledge and get involved in the development\",\n    \"meta\": [{\n        \"name\": \"description\",\n        \"content\": \"Our developer community is growing every day. Join us to learn, share your knowledge and get involved in the development\"\n    },\n    {\n        \"name\": \"keywords\",\n        \"content\": \"Open Source Community, Collaborative Coding, Web Solutions, Community-driven Development, webtechpie\"\n    }],\n    \"body\": [\n        {\n            \"title\": \"Open Source, Team\",\n            \"type\": \"section\",\n            \"content\": \"In today's digital age, coding is a superpower. It's the language of computers, and by learning to code, you gain the ability to create software, websites, mobile apps, and more. Here are some compelling reasons to start your coding journey with us:\",\n            \"controls\": [\n                {\n                    \"title\": \"Access Now\",\n                    \"link\": \"/solutions\",\n                    \"type\": \"button\",\n                    \"props\": [\n                        {\n                            \"variant\": \"primary\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}pages/",
+									"host": [
+										"{{baseURL}}pages"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1008"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3f0-UWoh0dYiu1q9j/Mc8lZWswMpAPs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Feb 2024 18:42:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"title\": \"Community\",\n        \"name\": \"community\",\n        \"descriptions\": \"Our developer community is growing every day. Join us to learn, share your knowledge and get involved in the development\",\n        \"meta\": [\n            {\n                \"name\": \"description\",\n                \"content\": \"Our developer community is growing every day. Join us to learn, share your knowledge and get involved in the development\"\n            },\n            {\n                \"name\": \"keywords\",\n                \"content\": \"Open Source Community, Collaborative Coding, Web Solutions, Community-driven Development, webtechpie\"\n            }\n        ],\n        \"body\": [\n            {\n                \"title\": \"Open Source, Team\",\n                \"type\": \"section\",\n                \"content\": \"In today's digital age, coding is a superpower. It's the language of computers, and by learning to code, you gain the ability to create software, websites, mobile apps, and more. Here are some compelling reasons to start your coding journey with us:\",\n                \"controls\": [\n                    {\n                        \"title\": \"Access Now\",\n                        \"link\": \"/solutions\",\n                        \"type\": \"button\",\n                        \"props\": [\n                            {\n                                \"variant\": \"primary\"\n                            }\n                        ]\n                    }\n                ]\n            }\n        ],\n        \"_id\": \"65c7c3983173aa9886884d62\",\n        \"__v\": 0\n    },\n    \"message\": \"Page 'community' has been successfully created!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create a Portfolio Page",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Portfolio\",\n    \"name\": \"portfolio\",\n    \"descriptions\": \"Our developer community | Professional Team\",\n    \"meta\": [{\n        \"name\": \"description\",\n        \"content\": \"Our developer community | Professional Team\"\n    },\n    {\n        \"name\": \"keywords\",\n        \"content\": \"Open Source Community, Collaborative Coding, Web Solutions, Community-driven Development, webtechpie\"\n    }],\n    \"body\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}pages/",
+							"host": [
+								"{{baseURL}}pages"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create a Page | AlreadtyExists",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Our Solutions\",\n    \"name\": \"solutions\",\n    \"descriptions\": \"Coding is a form of creative expression. You can turn your ideas into reality by building software and applications that solve real-world problems.\",\n    \"meta\": [{\n        \"name\": \"description\",\n        \"content\": \"Get trained by subject matter expert's in Webtechpie | Web App for your business\"\n    },\n    {\n        \"name\": \"keywords\",\n        \"content\": \"solutions, webtechpie solutions, webtechpie portfolio, webtechpie training, online training service, offline training, tech training, live sessions\"\n    }],\n    \"body\": [\n        {\n            \"title\": \"\",\n            \"type\": \"list\",\n            \"content\": \"Get trained by subject matter expert's, Live projects from scratch, Open discussions, Collborative teams, Mock Interviews, On demand training (Tech only)\",\n            \"controls\": [\n                {\n                    \"title\": \"Access Now\",\n                    \"link\": \"/solutions\",\n                    \"type\": \"button\",\n                    \"props\": [\n                        {\n                            \"aria-label\": \"\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}pages/",
+									"host": [
+										"{{baseURL}}pages"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "49"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"31-yBstyai+cCoZfnW5J7Ad9jtfXBw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Feb 2024 18:15:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Page 'solutions' is already exists!\"\n}"
+						},
+						{
+							"name": "Create a Portfolio Page",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Portfolio\",\n    \"name\": \"portfolio\",\n    \"descriptions\": \"Our developer community | Professional Team\",\n    \"meta\": [{\n        \"name\": \"description\",\n        \"content\": \"Our developer community | Professional Team\"\n    },\n    {\n        \"name\": \"keywords\",\n        \"content\": \"Open Source Community, Collaborative Coding, Web Solutions, Community-driven Development, webtechpie\"\n    }],\n    \"body\": []\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}pages/",
+									"host": [
+										"{{baseURL}}pages"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "442"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ba-REP4Dm0qt/GJm4+5A1FCJOoHyeg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Feb 2024 18:38:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"title\": \"Portfolio\",\n        \"name\": \"portfolio\",\n        \"descriptions\": \"Our developer community | Professional Team\",\n        \"meta\": [\n            {\n                \"name\": \"description\",\n                \"content\": \"Our developer community | Professional Team\"\n            },\n            {\n                \"name\": \"keywords\",\n                \"content\": \"Open Source Community, Collaborative Coding, Web Solutions, Community-driven Development, webtechpie\"\n            }\n        ],\n        \"body\": [],\n        \"_id\": \"65c7c2b23173aa9886884d5e\",\n        \"__v\": 0\n    },\n    \"message\": \"Page 'portfolio' has been successfully created!\"\n}"
 						}
 					]
 				}
@@ -256,6 +972,119 @@
 			"name": "core",
 			"item": [
 				{
+					"name": "portfolio",
+					"item": [
+						{
+							"name": "Get Core/portfolio",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}core/portfolio",
+									"host": [
+										"{{baseURL}}core"
+									],
+									"path": [
+										"portfolio"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a Portfolio",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Codeeng one\",\n    \"name\": \"codeeng\",\n    \"descriptions\": \"Basic configuration of the code environment needed for your project or new machine.\",\n    \"url\": \"https://codeeng.vercel.app/\",\n    \"type\": \"DEV_COMMUNITY\",\n    \"technologies\": [\"nextjs\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}core/portfolio",
+									"host": [
+										"{{baseURL}}core"
+									],
+									"path": [
+										"portfolio"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create a Portfolio",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"Codeeng\",\n    \"name\": \"codeeng\",\n    \"descriptions\": \"Basic configuration of the code environment needed for your project or new machine.\",\n    \"url\": \"https://codeeng.vercel.app/\",\n    \"type\": \"DEV_COMMUNITY\",\n    \"technologies\": [\"nextjs\"]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}pages/portfolio",
+											"host": [
+												"{{baseURL}}pages"
+											],
+											"path": [
+												"portfolio"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "335"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"14f-p/1Nki4ckqU9J7QX+wZW4gdI8Qg\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 10 Feb 2024 12:45:35 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"title\": \"Codeeng\",\n        \"name\": \"codeeng\",\n        \"descriptions\": \"Basic configuration of the code environment needed for your project or new machine.\",\n        \"type\": \"DEV_COMMUNITY\",\n        \"url\": \"https://codeeng.vercel.app/\",\n        \"technologies\": [\n            \"nextjs\"\n        ],\n        \"_id\": \"65c76fefa7576b2dbcc283ef\",\n        \"__v\": 0\n    },\n    \"message\": \"Portfolio 'codeeng' has been successfully created!\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
 					"name": "Get Navigations",
 					"request": {
 						"method": "GET",
@@ -336,11 +1165,84 @@
 				{
 					"name": "Get Plan",
 					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}plan/",
+							"host": [
+								"{{baseURL}}plan"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Navigations",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}core/navigations",
+									"host": [
+										"{{baseURL}}core"
+									],
+									"path": [
+										"navigations"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "515"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"203-SE0BJEXqTn/LYyBea7dqMZ36zp4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Feb 2024 11:47:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"primaryNavs\": [\n        {\n            \"id\": 1,\n            \"title\": \"Home\",\n            \"name\": \"home\",\n            \"link\": \"/\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"About Us\",\n            \"name\": \"about\",\n            \"link\": \"/about\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Solutions\",\n            \"name\": \"solutions\",\n            \"link\": \"/products\"\n        }\n    ],\n    \"footerNavs\": [\n        {\n            \"id\": 1,\n            \"title\": \"Home\",\n            \"name\": \"home\",\n            \"link\": \"/\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"About Us\",\n            \"name\": \"about\",\n            \"link\": \"/about\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Solutions\",\n            \"name\": \"solutions\",\n            \"link\": \"/products\"\n        }\n    ],\n    \"socialMediaList\": [\n        {\n            \"icon\": \"fa-facebook-square\",\n            \"link\": \"#\"\n        },\n        {\n            \"icon\": \"fa-twitter\",\n            \"link\": \"#\"\n        },\n        {\n            \"icon\": \"fa-google-plus-g\",\n            \"link\": \"#\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create a Plan",
+					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"hidayt\"\n}",
+							"raw": "{\n    \"title\": \"Pro\",\n    \"name\": \"pro\",\n    \"descriptions\": \"Currently, We are working on it, You will get update in the WhatsApp group :)\",\n    \"isPremium\": true,\n    \"type\": \"always\",\n    \"price\": 0\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -348,9 +1250,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseURL}}create",
+							"raw": "{{baseURL}}plan/create",
 							"host": [
-								"{{baseURL}}create"
+								"{{baseURL}}plan"
+							],
+							"path": [
+								"create"
 							]
 						}
 					},
@@ -413,62 +1318,6 @@
 					]
 				}
 			]
-		},
-		{
-			"name": "Create Project with image",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNvbW1hbmRlckB3ZWJ0ZWNocGllLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYxNjgyMzAwNSwiZXhwIjoxNjE2ODI0MjA1fQ.dT4fZHjMOUA8KOCuRCF7aqrP01TpeXcocNLqWDTnLQ8",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "name",
-							"value": "abc m rpiject",
-							"type": "text"
-						},
-						{
-							"key": "link",
-							"value": "http://www.webtechpie.com",
-							"type": "text"
-						},
-						{
-							"key": "description",
-							"value": "personal project",
-							"type": "text"
-						},
-						{
-							"key": "technologies",
-							"value": "html,nodejs,angular",
-							"type": "text"
-						},
-						{
-							"key": "image",
-							"type": "file",
-							"src": "/Users/hidaytrahman/Pictures/Editz/DSC_0328.jpg"
-						}
-					]
-				},
-				"url": {
-					"raw": "http://localhost:3100/api/projects",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3100",
-					"path": [
-						"api",
-						"projects"
-					]
-				}
-			},
-			"response": []
 		},
 		{
 			"name": "Get Solutions",

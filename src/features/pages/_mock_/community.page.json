@@ -1,0 +1,32 @@
+{
+    "title": "Community",
+    "name": "community",
+    "descriptions": "Our developer community is growing every day. Join us to learn, share your knowledge and get involved in the development",
+    "meta": [{
+        "name": "description",
+        "content": "Our developer community is growing every day. Join us to learn, share your knowledge and get involved in the development"
+    },
+    {
+        "name": "keywords",
+        "content": "Open Source Community, Collaborative Coding, Web Solutions, Community-driven Development, webtechpie"
+    }],
+    "body": [
+        {
+            "title": "Open Source, Team",
+            "type": "section",
+            "content": "In today's digital age, coding is a superpower. It's the language of computers, and by learning to code, you gain the ability to create software, websites, mobile apps, and more. Here are some compelling reasons to start your coding journey with us:",
+            "controls": [
+                {
+                    "title": "Access Now",
+                    "link": "/solutions",
+                    "type": "button",
+                    "props": [
+                        {
+                            "variant": "primary"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
