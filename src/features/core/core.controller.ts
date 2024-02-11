@@ -3,6 +3,7 @@ import { Body, Controller, Get, Post } from "@nestjs/common";
 import { CoresServices } from "./core.services";
 import { INavigationResponse } from "./utils/types";
 import { CreatePortfolioDto } from "./dto/create-portfolio.dto";
+import { Portfolio } from "./schema/portfolio.schema";
 
 @Controller("/core") // {baseURL}/core
 export class CoreController {
@@ -16,12 +17,12 @@ export class CoreController {
 
 	// core/portfolio
 	@Post("/portfolio")
-	async createPortfolio(@Body() createPortfolioDto: CreatePortfolioDto) {
-		return this.coreServices.createPortfolio(createPortfolioDto);
+	async createPortfolio(@Body() payload: CreatePortfolioDto) {
+		return this.coreServices.createPortfolio(payload);
 	}
 
 	@Get("/portfolio")
-	async getPortfolio() {
+	async getPortfolio(): Promise<Portfolio[]> {
 		return this.coreServices.fetchPortfolio();
 	}
 }

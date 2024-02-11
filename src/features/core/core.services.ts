@@ -38,6 +38,7 @@ export class CoresServices {
 	}
 
 	async fetchPortfolio(): Promise<Portfolio[]> {
-		return this.portfolioModel.find().exec();
+		// exclude __v field
+		return this.portfolioModel.find().select("-__v").exec();
 	}
 }
