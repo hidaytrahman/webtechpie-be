@@ -1,37 +1,150 @@
 [
     {
-        "id": 1,
-        "title": "codeeng",
-        "description": "Basic configuration of the code environment needed for your project or new machine.",
+        "_id": "65c7caa5276e1b5ca2897b2b",
+        "title": "Codeeng one",
+        "name": "codeeng",
+        "descriptions": "Basic configuration of the code environment needed for your project or new machine.",
+        "type": "DEV_COMMUNITY",
         "url": "https://codeeng.vercel.app/",
-        "avatar": "",
-        "technologies": []
+        "technologies": [
+            "nextjs"
+        ],
+        "__v": 0
     },
     {
-        "id": 2,
+        "_id": "65c8939c1a78ae66973dd440",
         "title": "react-carbonui",
-        "description": "A carbon copy UI to show the web page based on the traditional view",
+        "name": "react-carbonui",
+        "descriptions": "A carbon copy UI to show the web page based on the traditional view",
+        "type": "DEV_COMMUNITY",
         "url": "https://hidaytrahman.github.io/react-carbonui/",
-        "avatar": "",
         "github": "https://github.com/hidaytrahman/react-carbonui",
-        "technologies": []
+        "technologies": [
+            "react",
+            "typescript",
+            "styledComponents",
+            "storybook",
+            "rollup",
+            "babel"
+        ],
+        "__v": 0
     },
     {
-        "id": 3,
-        "title": "preapi",
-        "description": "A very simple API prototype file based database",
+        "_id": "65c894171a78ae66973dd444",
+        "title": "Pre API",
+        "name": "preapi",
+        "descriptions": "A very simple API prototype file based database.",
+        "type": "DEV_COMMUNITY",
         "url": "https://preapi.vercel.app/",
-        "avatar": "",
         "github": "https://github.com/hidaytrahman/preapi",
-        "technologies": []
+        "technologies": [
+            "node",
+            "express",
+            "nanoid",
+            "dotenv",
+            "rest api"
+        ],
+        "__v": 0
     },
     {
-        "id": 4,
-        "title": "chepo",
-        "description": "Easiest way to get mock data",
+        "_id": "65c894b01a78ae66973dd447",
+        "title": "Chepo | Copy | Clone",
+        "name": "chepo",
+        "descriptions": "Easiest way to get mock data",
+        "type": "DEV_COMMUNITY",
         "url": "https://hidaytrahman.github.io/chepo/",
-        "avatar": "",
         "github": "https://github.com/hidaytrahman/chepo",
-        "technologies": []
+        "technologies": [
+            "react",
+            "typescript",
+            "tailwindCSS",
+            "vite",
+            "postcss"
+        ],
+        "__v": 0
+    },
+    {
+        "_id": "65c89532c2209dff110b4977",
+        "title": "Expensy Spy",
+        "name": "expenseSpy",
+        "descriptions": "Keeping track of your expenses is an important part of managing your overall finances.",
+        "type": "EXPERIMENTS",
+        "url": "https://hidaytrahman.github.io/expenseSpy/",
+        "github": "https://github.com/hidaytrahman/expenseSpy",
+        "technologies": [
+            "react",
+            "SCSS",
+            "mobx"
+        ],
+        "__v": 0
+    },
+    {
+        "_id": "65c89693c2209dff110b497a",
+        "title": "Cam Check Mate | Browser webcam testing tool,",
+        "name": "camcheckmate",
+        "descriptions": "Browser webcam testing tool, Ensuring that your webcam works seamlessly with various web applications and browsers can be a challenge due to compatibility issues",
+        "type": "EXPERIMENTS",
+        "url": "https://camcheckmate.vercel.app/",
+        "github": "https://github.com/hidaytrahman/camcheckmate",
+        "technologies": [
+            "react",
+            "typescript",
+            "tailwindCSS",
+            "vite",
+            "axios",
+            "react-carbonui",
+            "react-flex-styled"
+        ],
+        "__v": 0
+    },
+    {
+        "_id": "65c89766c2209dff110b497e",
+        "title": "Rezume. | Resume maker",
+        "name": "rezume",
+        "descriptions": "One touch resume | Create Resume, Print Resume in PDF or JSON format",
+        "type": "EXPERIMENTS",
+        "url": "https://hidaytrahman.github.io/rezume/#/",
+        "github": "https://github.com/hidaytrahman/rezume",
+        "technologies": [
+            "react",
+            "redux",
+            "hotdom",
+            "CRA",
+            "html2pdf.js"
+        ],
+        "__v": 0
+    },
+    {
+        "_id": "65c897c0c2209dff110b4982",
+        "title": "🖊️Less - To Do",
+        "name": "penless-todo",
+        "descriptions": "PenLess To Do gives you focus, from work to play. 😎",
+        "type": "EXPERIMENTS",
+        "url": "https://hidaytrahman.github.io/penless-todo/",
+        "github": "https://github.com/hidaytrahman/penless-todo",
+        "technologies": [
+            "react",
+            "mobx",
+            "typescript",
+            "CRA"
+        ],
+        "__v": 0
+    },
+    {
+        "_id": "65c89889c2209dff110b4986",
+        "title": "GraHub",
+        "name": "grahub",
+        "descriptions": "Get a quick view of your customer’s interactions to deliver personalized experiences.",
+        "type": "EXPERIMENTS",
+        "url": "https://hidaytrahman.github.io/grahub/",
+        "github": "https://github.com/hidaytrahman/grahub",
+        "technologies": [
+            "react",
+            "axios",
+            "typescript",
+            "StyledComponents",
+            "CRA"
+        ],
+        "__v": 0
     }
 ]

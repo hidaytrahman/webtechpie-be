@@ -23,7 +23,7 @@ export class PagesController {
 	// pages/portfolio
 	@Get("/portfolio")
 	getPortfolio(): any {
-		return this.pagesServices.getPortfolio();
+		return this.pagesServices.fetchPortfolio();
 	}
 
 	// core/portfolio
@@ -33,9 +33,9 @@ export class PagesController {
 	}
 
 	// pages/community
-	@Get("/portfolio")
+	@Get("/community")
 	getCommunity(): any {
-		return this.pagesServices.getPortfolio();
+		return this.pagesServices.fetchCommunity();
 	}
 
 	// pages/members

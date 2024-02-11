@@ -1,5 +1,4 @@
 import { Injectable } from "@nestjs/common";
-import { solutionHighlights } from "./data";
 import { InjectModel } from "@nestjs/mongoose";
 import { Model } from "mongoose";
 import { CreatePageDto } from "./dto/create-page.dto";
@@ -8,10 +7,6 @@ import { Page } from "./schema/portfolio.schema";
 @Injectable()
 export class PagesServices {
 	constructor(@InjectModel(Page.name) private pageModel: Model<Page>) {}
-
-	getLanding() {
-		return "This is landing";
-	}
 
 	// fetch landing page
 	async fetchLanding(): Promise<any> {
@@ -45,24 +40,36 @@ export class PagesServices {
 		}
 	}
 
-	getSolutions() {
-		return {
-			title: "Our Solutions",
-			pageId: "solutions",
-			descriptions:
-				"Coding is a form of creative expression. You can turn your ideas into reality by building software and applications that solve real-world problems.",
-			highlights: solutionHighlights,
-		};
+	// fetch portfolio page
+	async fetchPortfolio(): Promise<any> {
+		const name = "portfolio";
+		const result = await this.pageModel.findOne({
+			name: name,
+		});
+
+		if (result) {
+			return result;
+		} else {
+			return {
+				message: `No result found for '${name}'`,
+			};
+		}
 	}
 
-	getPortfolio() {
-		return {
-			title: "Portfolio",
-			pageId: "portfolio",
-			descriptions: "Our developer community",
+	// fetch community page
+	async fetchCommunity(): Promise<any> {
+		const name = "community";
+		const result = await this.pageModel.findOne({
+			name: name,
+		});
 
-			// list: portfolioList,
-		};
+		if (result) {
+			return result;
+		} else {
+			return {
+				message: `No result found for '${name}'`,
+			};
+		}
 	}
 
 	async createPage(payload: CreatePageDto): Promise<any> {

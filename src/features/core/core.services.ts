@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { navigationsResponse } from "./utils/navigation.utils";
 import { INavigationResponse } from "./utils/types";
-import { Portoflio } from "./schema/portfolio.schema";
+import { Portfolio } from "./schema/portfolio.schema";
 import { Model } from "mongoose";
 import { InjectModel } from "@nestjs/mongoose";
 import { CreatePortfolioDto } from "./dto/create-portfolio.dto";
@@ -9,7 +9,7 @@ import { CreatePortfolioDto } from "./dto/create-portfolio.dto";
 @Injectable()
 export class CoresServices {
 	constructor(
-		@InjectModel(Portoflio.name) private portfolioModel: Model<Portoflio>
+		@InjectModel(Portfolio.name) private portfolioModel: Model<Portfolio>
 	) {}
 
 	getNavigations(): INavigationResponse {
@@ -37,7 +37,7 @@ export class CoresServices {
 		}
 	}
 
-	async fetchPortfolio(): Promise<Portoflio[]> {
+	async fetchPortfolio(): Promise<Portfolio[]> {
 		return this.portfolioModel.find().exec();
 	}
 }
