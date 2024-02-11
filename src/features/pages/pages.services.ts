@@ -3,6 +3,7 @@ import { InjectModel } from "@nestjs/mongoose";
 import { Model } from "mongoose";
 import { CreatePageDto } from "./dto/create-page.dto";
 import { Page } from "./schema/portfolio.schema";
+import { PAGE, PAGE_SELECTED_FIELDS } from "./utils";
 
 @Injectable()
 export class PagesServices {
@@ -10,9 +11,9 @@ export class PagesServices {
 
 	// fetch landing page
 	async fetchLanding(): Promise<any> {
-		const name = "landing";
+		const name = PAGE.LANDING;
 		const result = await this.pageModel.findOne({
-			name: name,
+			name,
 		});
 
 		if (result) {
@@ -24,11 +25,27 @@ export class PagesServices {
 		}
 	}
 
-	// fetch landing page
+	// fetch all pages
+	async fetchPages(): Promise<any> {
+		// get  data from db and select only needed fields
+		const result = await this.pageModel
+			.find({}, PAGE_SELECTED_FIELDS)
+			.exec();
+
+		if (result) {
+			return result;
+		} else {
+			return {
+				message: `No results found :(`,
+			};
+		}
+	}
+
+	// fetch solutions page
 	async fetchSolutions(): Promise<any> {
-		const name = "solutions";
+		const name = PAGE.SOLUTIONS;
 		const result = await this.pageModel.findOne({
-			name: name,
+			name,
 		});
 
 		if (result) {
@@ -42,9 +59,9 @@ export class PagesServices {
 
 	// fetch portfolio page
 	async fetchPortfolio(): Promise<any> {
-		const name = "portfolio";
+		const name = PAGE.PORTFOLIO;
 		const result = await this.pageModel.findOne({
-			name: name,
+			name,
 		});
 
 		if (result) {
@@ -58,9 +75,9 @@ export class PagesServices {
 
 	// fetch community page
 	async fetchCommunity(): Promise<any> {
-		const name = "community";
+		const name = PAGE.COMMUNITY;
 		const result = await this.pageModel.findOne({
-			name: name,
+			name,
 		});
 
 		if (result) {

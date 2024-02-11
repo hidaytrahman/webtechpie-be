@@ -1,42 +1,45 @@
 import { Body, Controller, Get, Post } from "@nestjs/common";
 import { PagesServices } from "./pages.services";
 import { CreatePageDto } from "./dto/create-page.dto";
-// import { CreatePortfolioDto } from "./dto/create-portfolio.dto";
+import { IPage } from "./types";
 
 @Controller("/pages")
 export class PagesController {
 	constructor(private pagesServices: PagesServices) {}
 
+	// pages/
+	@Get()
+	async getPages(): Promise<IPage> {
+		return await this.pagesServices.fetchPages();
+	}
+
+	// pages/landing
 	@Get("/landing")
-	async getLanding() {
+	async getLanding(): Promise<IPage> {
 		return await this.pagesServices.fetchLanding();
 	}
 
-	// pages/config
-
 	// pages/services
 	@Get("/solutions")
-	getSolutions(): any {
+	getSolutions(): Promise<IPage> {
 		return this.pagesServices.fetchSolutions();
 	}
 
 	// pages/portfolio
 	@Get("/portfolio")
-	getPortfolio(): any {
+	getPortfolio(): Promise<IPage> {
 		return this.pagesServices.fetchPortfolio();
-	}
-
-	// core/portfolio
-	@Post()
-	async createPortfolio(@Body() createPortfolioDto: CreatePageDto) {
-		return this.pagesServices.createPage(createPortfolioDto);
 	}
 
 	// pages/community
 	@Get("/community")
-	getCommunity(): any {
+	getCommunity(): Promise<IPage> {
 		return this.pagesServices.fetchCommunity();
 	}
 
-	// pages/members
+	// create a page
+	@Post()
+	async createPage(@Body() payload: CreatePageDto): Promise<IPage> {
+		return this.pagesServices.createPage(payload);
+	}
 }

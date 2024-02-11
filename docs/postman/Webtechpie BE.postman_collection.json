@@ -10,175 +10,6 @@
 			"name": "pages",
 			"item": [
 				{
-					"name": "portfolio",
-					"item": [
-						{
-							"name": "Get Pages/portfolio",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{baseURL}}pages/portfolio",
-									"host": [
-										"{{baseURL}}pages"
-									],
-									"path": [
-										"portfolio"
-									]
-								}
-							},
-							"response": [
-								{
-									"name": "Get Pages/portfolio",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{baseURL}}pages/portfolio",
-											"host": [
-												"{{baseURL}}pages"
-											],
-											"path": [
-												"portfolio"
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "X-Powered-By",
-											"value": "Express"
-										},
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json; charset=utf-8"
-										},
-										{
-											"key": "Content-Length",
-											"value": "946"
-										},
-										{
-											"key": "ETag",
-											"value": "W/\"3b2-xbr4am2T6b47pZSooxyrxU4qnqY\""
-										},
-										{
-											"key": "Date",
-											"value": "Sat, 03 Feb 2024 19:53:18 GMT"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=5"
-										}
-									],
-									"cookie": [],
-									"body": "{\n    \"title\": \"Portfolio\",\n    \"pageId\": \"portfolio\",\n    \"descriptions\": \"Our developer community\",\n    \"list\": [\n        {\n            \"id\": 1,\n            \"title\": \"codeeng\",\n            \"description\": \"Basic configuration of the code environment needed for your project or new machine.\",\n            \"url\": \"https://codeeng.vercel.app/\",\n            \"avatar\": \"\",\n            \"technologies\": []\n        },\n        {\n            \"id\": 2,\n            \"title\": \"react-carbonui\",\n            \"description\": \"A carbon copy UI to show the web page based on the traditional view\",\n            \"url\": \"https://hidaytrahman.github.io/react-carbonui/\",\n            \"avatar\": \"\",\n            \"github\": \"https://github.com/hidaytrahman/react-carbonui\",\n            \"technologies\": []\n        },\n        {\n            \"id\": 3,\n            \"title\": \"preapi\",\n            \"description\": \"A very simple API prototype file based database\",\n            \"url\": \"https://preapi.vercel.app/\",\n            \"avatar\": \"\",\n            \"github\": \"https://github.com/hidaytrahman/preapi\",\n            \"technologies\": []\n        },\n        {\n            \"id\": 4,\n            \"title\": \"chepo\",\n            \"description\": \"Easiest way to get mock data\",\n            \"url\": \"https://hidaytrahman.github.io/chepo/\",\n            \"avatar\": \"\",\n            \"github\": \"https://github.com/hidaytrahman/chepo\",\n            \"technologies\": []\n        }\n    ]\n}"
-								}
-							]
-						},
-						{
-							"name": "Create a Portfolio",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"title\": \"Codeeng\",\n    \"name\": \"codeeng\",\n    \"descriptions\": \"Basic configuration of the code environment needed for your project or new machine.\",\n    \"url\": \"https://codeeng.vercel.app/\",\n    \"type\": \"DEV_COMMUNITY\",\n    \"technologies\": [\"nextjs\"]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{baseURL}}pages/portfolio",
-									"host": [
-										"{{baseURL}}pages"
-									],
-									"path": [
-										"portfolio"
-									]
-								}
-							},
-							"response": [
-								{
-									"name": "Create a Portfolio",
-									"originalRequest": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"title\": \"Codeeng\",\n    \"name\": \"codeeng\",\n    \"descriptions\": \"Basic configuration of the code environment needed for your project or new machine.\",\n    \"url\": \"https://codeeng.vercel.app/\",\n    \"type\": \"DEV_COMMUNITY\",\n    \"technologies\": [\"nextjs\"]\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{baseURL}}pages/portfolio",
-											"host": [
-												"{{baseURL}}pages"
-											],
-											"path": [
-												"portfolio"
-											]
-										}
-									},
-									"status": "Created",
-									"code": 201,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "X-Powered-By",
-											"value": "Express"
-										},
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json; charset=utf-8"
-										},
-										{
-											"key": "Content-Length",
-											"value": "335"
-										},
-										{
-											"key": "ETag",
-											"value": "W/\"14f-p/1Nki4ckqU9J7QX+wZW4gdI8Qg\""
-										},
-										{
-											"key": "Date",
-											"value": "Sat, 10 Feb 2024 12:45:35 GMT"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=5"
-										}
-									],
-									"cookie": [],
-									"body": "{\n    \"data\": {\n        \"title\": \"Codeeng\",\n        \"name\": \"codeeng\",\n        \"descriptions\": \"Basic configuration of the code environment needed for your project or new machine.\",\n        \"type\": \"DEV_COMMUNITY\",\n        \"url\": \"https://codeeng.vercel.app/\",\n        \"technologies\": [\n            \"nextjs\"\n        ],\n        \"_id\": \"65c76fefa7576b2dbcc283ef\",\n        \"__v\": 0\n    },\n    \"message\": \"Portfolio 'codeeng' has been successfully created!\"\n}"
-								}
-							]
-						}
-					]
-				},
-				{
 					"name": "Get Pages/Landing",
 					"request": {
 						"method": "GET",
@@ -193,7 +24,63 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Get Pages/Landing",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}pages/landing",
+									"host": [
+										"{{baseURL}}pages"
+									],
+									"path": [
+										"landing"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 11 Feb 2024 09:58:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2430"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"97e-JLBNFm/b/5PW+CUvPnUS2tzrAME\""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Apigw-Requestid",
+									"value": "S90JrgJ6oE0EPXA="
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"65c7ca49276e1b5ca2897b22\",\n    \"title\": \"Webtechpie | Unite. Code. Inspire\",\n    \"name\": \"landing\",\n    \"descriptions\": \"Webtechpie | Unite. Code. Inspire\",\n    \"meta\": [\n        {\n            \"name\": \"description\",\n            \"content\": \"Welcome to our vibrant and inclusive open source community dedicated to pushing the boundaries of web development. We are a passionate group of developers, designers, and innovators who believe in the power of open collaboration\"\n        },\n        {\n            \"name\": \"keywords\",\n            \"content\": \"Open Source Community, Collaborative Coding, Web Solutions, Community-driven Development, webtechpie\"\n        }\n    ],\n    \"body\": [\n        {\n            \"title\": \"Coding Together, Openly Forever\",\n            \"type\": \"section\",\n            \"content\": \"Welcome to our vibrant and inclusive open source community dedicated to pushing the boundaries of web development. We are a passionate group of developers, designers, and innovators who believe in the power of open collaboration.\",\n            \"controls\": [\n                {\n                    \"title\": \"Explore\",\n                    \"link\": \"/community\",\n                    \"type\": \"button\",\n                    \"props\": [\n                        {\n                            \"variant\": \"primary\"\n                        }\n                    ]\n                },\n                {\n                    \"title\": \"Our Expertise\",\n                    \"link\": \"/solutions\",\n                    \"type\": \"button\",\n                    \"props\": [\n                        {\n                            \"aria-label\": \"\",\n                            \"variant\": \"secondary\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"title\": \"Learn together\",\n            \"type\": \"section\",\n            \"content\": \"Are you ready to unlock the world of coding and programming? Whether you're a complete beginner or an experienced developer looking to expand your skills, our 'Learn Code and Programming' section is your gateway to the exciting realm of computer programming.\",\n            \"controls\": [],\n            \"list\": \"Maximize productivity and growth, Endless Opportunities and Problem Solving, Learn the top techniques\"\n        },\n        {\n            \"title\": \"Build Together\",\n            \"type\": \"section\",\n            \"content\": \"coding is a superpower. It's the language of computers, and by learning to code, you gain the ability to create software, websites, mobile apps, and more\",\n            \"controls\": []\n        },\n        {\n            \"title\": \"Explore\",\n            \"type\": \"section\",\n            \"content\": \"Whether you dream of becoming a software developer, building your own startup, or simply understanding the digital world better, learning to code is a valuable skill. It's a journey that can lead to a fulfilling career and endless possibilities.\",\n            \"list\": \"Hands-on coding projects that allow you to apply what you've learned in real-world scenarios. Build web applications, games, and more., Connect with a vibrant community of fellow learners and experienced developers. Share your progress, seek help, and collaborate on coding projects., Coding is not just a skill; it's a superpower. Join us and become a coding superhero today!\"\n        }\n    ],\n    \"__v\": 0\n}"
+						}
+					]
 				},
 				{
 					"name": "Get Pages/Solutions",
@@ -265,6 +152,152 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"title\": \"Our Solutions\",\n    \"pageId\": \"solutions\",\n    \"descriptions\": \"Coding is a form of creative expression. You can turn your ideas into reality by building software and applications that solve real-world problems.\",\n    \"highlights\": [\n        \"Get trained by subject matter expert's\",\n        \"Live projects from scratch\",\n        \"Open discussions\",\n        \"Collborative teams\",\n        \"Mock Interviews\",\n        \"On demand training (Tech only)\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Pages/community",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}pages/community",
+							"host": [
+								"{{baseURL}}pages"
+							],
+							"path": [
+								"community"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Pages/Community",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}pages/community",
+									"host": [
+										"{{baseURL}}pages"
+									],
+									"path": [
+										"community"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "939"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3ab-DY05F5afNgN+3byWFCFw248stB4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Feb 2024 10:40:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"65c7ca51276e1b5ca2897b25\",\n    \"title\": \"Community\",\n    \"name\": \"community\",\n    \"descriptions\": \"Our developer community is growing every day. Join us to learn, share your knowledge and get involved in the development\",\n    \"meta\": [\n        {\n            \"name\": \"description\",\n            \"content\": \"Our developer community is growing every day. Join us to learn, share your knowledge and get involved in the development\"\n        },\n        {\n            \"name\": \"keywords\",\n            \"content\": \"Open Source Community, Collaborative Coding, Web Solutions, Community-driven Development, webtechpie\"\n        }\n    ],\n    \"body\": [\n        {\n            \"title\": \"Open Source, Team\",\n            \"type\": \"section\",\n            \"content\": \"In today's digital age, coding is a superpower. It's the language of computers, and by learning to code, you gain the ability to create software, websites, mobile apps, and more. Here are some compelling reasons to start your coding journey with us:\",\n            \"controls\": [\n                {\n                    \"title\": \"Access Now\",\n                    \"link\": \"/solutions\",\n                    \"type\": \"button\",\n                    \"props\": [\n                        {\n                            \"variant\": \"primary\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ],\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Pages/community Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}pages/portfolio",
+							"host": [
+								"{{baseURL}}pages"
+							],
+							"path": [
+								"portfolio"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Pages/Portfolio",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}pages/portfolio",
+									"host": [
+										"{{baseURL}}pages"
+									],
+									"path": [
+										"portfolio"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "373"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"175-qjHMmnfYldcpaCIYhemVdIfl03c\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Feb 2024 10:41:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"65c7ca54276e1b5ca2897b28\",\n    \"title\": \"Portfolio\",\n    \"name\": \"portfolio\",\n    \"descriptions\": \"Our developer community | Professional Team\",\n    \"meta\": [\n        {\n            \"name\": \"description\",\n            \"content\": \"Our developer community | Professional Team\"\n        },\n        {\n            \"name\": \"keywords\",\n            \"content\": \"Open Source Community, Collaborative Coding, Web Solutions, Community-driven Development, webtechpie\"\n        }\n    ],\n    \"body\": [],\n    \"__v\": 0\n}"
 						}
 					]
 				},
@@ -998,7 +1031,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"title\": \"Codeeng one\",\n    \"name\": \"codeeng\",\n    \"descriptions\": \"Basic configuration of the code environment needed for your project or new machine.\",\n    \"url\": \"https://codeeng.vercel.app/\",\n    \"type\": \"DEV_COMMUNITY\",\n    \"technologies\": [\"nextjs\"]\n}",
+									"raw": "{\n    \"title\": \"GraHub\",\n    \"name\": \"grahub\",\n    \"descriptions\": \"Get a quick view of your customer’s interactions to deliver personalized experiences.\",\n    \"url\": \"https://hidaytrahman.github.io/grahub/\",\n    \"type\": \"EXPERIMENTS\",\n    \"github\": \"https://github.com/hidaytrahman/grahub\",\n    \"technologies\": [\"react\", \"axios\", \"typescript\", \"StyledComponents\", \"CRA\"]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1079,6 +1112,518 @@
 									],
 									"cookie": [],
 									"body": "{\n    \"data\": {\n        \"title\": \"Codeeng\",\n        \"name\": \"codeeng\",\n        \"descriptions\": \"Basic configuration of the code environment needed for your project or new machine.\",\n        \"type\": \"DEV_COMMUNITY\",\n        \"url\": \"https://codeeng.vercel.app/\",\n        \"technologies\": [\n            \"nextjs\"\n        ],\n        \"_id\": \"65c76fefa7576b2dbcc283ef\",\n        \"__v\": 0\n    },\n    \"message\": \"Portfolio 'codeeng' has been successfully created!\"\n}"
+								},
+								{
+									"name": "Portfolio carbon-ui",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"react-carbonui\",\n    \"name\": \"react-carbonui\",\n    \"descriptions\": \"A carbon copy UI to show the web page based on the traditional view\",\n    \"url\": \"https://hidaytrahman.github.io/react-carbonui/\",\n    \"type\": \"DEV_COMMUNITY\",\n    \"github\": \"https://github.com/hidaytrahman/react-carbonui\",\n    \"technologies\": [\"react\", \"typescript\", \"styledComponents\", \"storybook\", \"rollup\", \"babel\"]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}core/portfolio",
+											"host": [
+												"{{baseURL}}core"
+											],
+											"path": [
+												"portfolio"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 11 Feb 2024 09:30:04 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "477"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "etag",
+											"value": "W/\"1dd-oiipLmGJTmBlmYjmUDfuLiDEX9E\""
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Apigw-Requestid",
+											"value": "S9v_9jPMIE0EP7g="
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"title\": \"react-carbonui\",\n        \"name\": \"react-carbonui\",\n        \"descriptions\": \"A carbon copy UI to show the web page based on the traditional view\",\n        \"type\": \"DEV_COMMUNITY\",\n        \"url\": \"https://hidaytrahman.github.io/react-carbonui/\",\n        \"github\": \"https://github.com/hidaytrahman/react-carbonui\",\n        \"technologies\": [\n            \"react\",\n            \"typescript\",\n            \"styledComponents\",\n            \"storybook\",\n            \"rollup\",\n            \"babel\"\n        ],\n        \"_id\": \"65c8939c1a78ae66973dd440\",\n        \"__v\": 0\n    },\n    \"message\": \"Portfolio 'react-carbonui' has been successfully created!\"\n}"
+								},
+								{
+									"name": "pre-api",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"Pre API\",\n    \"name\": \"preapi\",\n    \"descriptions\": \"A very simple API prototype file based database.\",\n    \"url\": \"https://preapi.vercel.app/\",\n    \"type\": \"DEV_COMMUNITY\",\n    \"github\": \"https://github.com/hidaytrahman/preapi\",\n    \"technologies\": [\"node\", \"express\", \"nanoid\", \"dotenv\", \"rest api\"]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}core/portfolio",
+											"host": [
+												"{{baseURL}}core"
+											],
+											"path": [
+												"portfolio"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 11 Feb 2024 09:32:07 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "384"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "etag",
+											"value": "W/\"180-d5FxUDoQI09YYtSj8tOcY/8dP2M\""
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Apigw-Requestid",
+											"value": "S9wTliV0oE0EPcA="
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"title\": \"Pre API\",\n        \"name\": \"preapi\",\n        \"descriptions\": \"A very simple API prototype file based database.\",\n        \"type\": \"DEV_COMMUNITY\",\n        \"url\": \"https://preapi.vercel.app/\",\n        \"github\": \"https://github.com/hidaytrahman/preapi\",\n        \"technologies\": [\n            \"node\",\n            \"express\",\n            \"nanoid\",\n            \"dotenv\",\n            \"rest api\"\n        ],\n        \"_id\": \"65c894171a78ae66973dd444\",\n        \"__v\": 0\n    },\n    \"message\": \"Portfolio 'preapi' has been successfully created!\"\n}"
+								},
+								{
+									"name": "chepo",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"Chepo | Copy | Clone\",\n    \"name\": \"chepo\",\n    \"descriptions\": \"Easiest way to get mock data\",\n    \"url\": \"https://hidaytrahman.github.io/chepo/\",\n    \"type\": \"DEV_COMMUNITY\",\n    \"github\": \"https://github.com/hidaytrahman/chepo\",\n    \"technologies\": [\"react\", \"typescript\", \"tailwindCSS\", \"vite\", \"postcss\"]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}core/portfolio",
+											"host": [
+												"{{baseURL}}core"
+											],
+											"path": [
+												"portfolio"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 11 Feb 2024 09:34:40 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "391"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "etag",
+											"value": "W/\"187-tiJJ8R7vuyCG+a3fkR80ovFGCHQ\""
+										},
+										{
+											"key": "Apigw-Requestid",
+											"value": "S9wroi11IE0EPog="
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"title\": \"Chepo | Copy | Clone\",\n        \"name\": \"chepo\",\n        \"descriptions\": \"Easiest way to get mock data\",\n        \"type\": \"DEV_COMMUNITY\",\n        \"url\": \"https://hidaytrahman.github.io/chepo/\",\n        \"github\": \"https://github.com/hidaytrahman/chepo\",\n        \"technologies\": [\n            \"react\",\n            \"typescript\",\n            \"tailwindCSS\",\n            \"vite\",\n            \"postcss\"\n        ],\n        \"_id\": \"65c894b01a78ae66973dd447\",\n        \"__v\": 0\n    },\n    \"message\": \"Portfolio 'chepo' has been successfully created!\"\n}"
+								},
+								{
+									"name": "expenseSpy",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"Expensy Spy\",\n    \"name\": \"expenseSpy\",\n    \"descriptions\": \"Keeping track of your expenses is an important part of managing your overall finances.\",\n    \"url\": \"https://hidaytrahman.github.io/expenseSpy/\",\n    \"type\": \"EXPERIMENTS\",\n    \"github\": \"https://github.com/hidaytrahman/expenseSpy\",\n    \"technologies\": [\"react\", \"SCSS\", \"mobx\"]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}core/portfolio",
+											"host": [
+												"{{baseURL}}core"
+											],
+											"path": [
+												"portfolio"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 11 Feb 2024 09:36:50 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "428"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "etag",
+											"value": "W/\"1ac-SNgWI523psrneeBABZhluf/CWPU\""
+										},
+										{
+											"key": "Apigw-Requestid",
+											"value": "S9w_UigzIE0EPag="
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"title\": \"Expensy Spy\",\n        \"name\": \"expenseSpy\",\n        \"descriptions\": \"Keeping track of your expenses is an important part of managing your overall finances.\",\n        \"type\": \"EXPERIMENTS\",\n        \"url\": \"https://hidaytrahman.github.io/expenseSpy/\",\n        \"github\": \"https://github.com/hidaytrahman/expenseSpy\",\n        \"technologies\": [\n            \"react\",\n            \"SCSS\",\n            \"mobx\"\n        ],\n        \"_id\": \"65c89532c2209dff110b4977\",\n        \"__v\": 0\n    },\n    \"message\": \"Portfolio 'expenseSpy' has been successfully created!\"\n}"
+								},
+								{
+									"name": "camcheckmate",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"Cam Check Mate | Browser webcam testing tool,\",\n    \"name\": \"camcheckmate\",\n    \"descriptions\": \"Browser webcam testing tool, Ensuring that your webcam works seamlessly with various web applications and browsers can be a challenge due to compatibility issues\",\n    \"url\": \"https://camcheckmate.vercel.app/\",\n    \"type\": \"EXPERIMENTS\",\n    \"github\": \"https://github.com/hidaytrahman/camcheckmate\",\n    \"technologies\": [\"react\", \"typescript\", \"tailwindCSS\", \"vite\", \"axios\", \"react-carbonui\", \"react-flex-styled\"]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}core/portfolio",
+											"host": [
+												"{{baseURL}}core"
+											],
+											"path": [
+												"portfolio"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 11 Feb 2024 09:42:43 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "598"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "etag",
+											"value": "W/\"256-FsaxAXQAE2w3miWZ7KY2J+ZPA0Y\""
+										},
+										{
+											"key": "Apigw-Requestid",
+											"value": "S9x29jHUoE0EPoQ="
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"title\": \"Cam Check Mate | Browser webcam testing tool,\",\n        \"name\": \"camcheckmate\",\n        \"descriptions\": \"Browser webcam testing tool, Ensuring that your webcam works seamlessly with various web applications and browsers can be a challenge due to compatibility issues\",\n        \"type\": \"EXPERIMENTS\",\n        \"url\": \"https://camcheckmate.vercel.app/\",\n        \"github\": \"https://github.com/hidaytrahman/camcheckmate\",\n        \"technologies\": [\n            \"react\",\n            \"typescript\",\n            \"tailwindCSS\",\n            \"vite\",\n            \"axios\",\n            \"react-carbonui\",\n            \"react-flex-styled\"\n        ],\n        \"_id\": \"65c89693c2209dff110b497a\",\n        \"__v\": 0\n    },\n    \"message\": \"Portfolio 'camcheckmate' has been successfully created!\"\n}"
+								},
+								{
+									"name": "rezume",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"Rezume. | Resume maker\",\n    \"name\": \"rezume\",\n    \"descriptions\": \"One touch resume | Create Resume, Print Resume in PDF or JSON format\",\n    \"url\": \"https://hidaytrahman.github.io/rezume/#/\",\n    \"type\": \"EXPERIMENTS\",\n    \"github\": \"https://github.com/hidaytrahman/rezume\",\n    \"technologies\": [\"react\", \"redux\", \"hotdom\", \"CRA\", \"html2pdf.js\"]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}core/portfolio",
+											"host": [
+												"{{baseURL}}core"
+											],
+											"path": [
+												"portfolio"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 11 Feb 2024 09:46:14 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "430"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "etag",
+											"value": "W/\"1ae-1OGCZEwXV7iY36FMPIrAqXUGSy4\""
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Apigw-Requestid",
+											"value": "S9yYBikOIE0EPGw="
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"title\": \"Rezume. | Resume maker\",\n        \"name\": \"rezume\",\n        \"descriptions\": \"One touch resume | Create Resume, Print Resume in PDF or JSON format\",\n        \"type\": \"EXPERIMENTS\",\n        \"url\": \"https://hidaytrahman.github.io/rezume/#/\",\n        \"github\": \"https://github.com/hidaytrahman/rezume\",\n        \"technologies\": [\n            \"react\",\n            \"redux\",\n            \"hotdom\",\n            \"CRA\",\n            \"html2pdf.js\"\n        ],\n        \"_id\": \"65c89766c2209dff110b497e\",\n        \"__v\": 0\n    },\n    \"message\": \"Portfolio 'rezume' has been successfully created!\"\n}"
+								},
+								{
+									"name": "penless-tod",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"🖊️Less - To Do\",\n    \"name\": \"penless-todo\",\n    \"descriptions\": \"PenLess To Do gives you focus, from work to play. 😎\",\n    \"url\": \"https://hidaytrahman.github.io/penless-todo/\",\n    \"type\": \"EXPERIMENTS\",\n    \"github\": \"https://github.com/hidaytrahman/penless-todo\",\n    \"technologies\": [\"react\", \"mobx\", \"typescript\", \"CRA\"]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}core/portfolio",
+											"host": [
+												"{{baseURL}}core"
+											],
+											"path": [
+												"portfolio"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 11 Feb 2024 09:47:44 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "424"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "etag",
+											"value": "W/\"1a8-2qKqs5wHuwdPoUzsQ3wM4OyrRqQ\""
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Apigw-Requestid",
+											"value": "S9ymEjY5oE0EP-Q="
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"title\": \"🖊️Less - To Do\",\n        \"name\": \"penless-todo\",\n        \"descriptions\": \"PenLess To Do gives you focus, from work to play. 😎\",\n        \"type\": \"EXPERIMENTS\",\n        \"url\": \"https://hidaytrahman.github.io/penless-todo/\",\n        \"github\": \"https://github.com/hidaytrahman/penless-todo\",\n        \"technologies\": [\n            \"react\",\n            \"mobx\",\n            \"typescript\",\n            \"CRA\"\n        ],\n        \"_id\": \"65c897c0c2209dff110b4982\",\n        \"__v\": 0\n    },\n    \"message\": \"Portfolio 'penless-todo' has been successfully created!\"\n}"
+								},
+								{
+									"name": "grahub",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"GraHub\",\n    \"name\": \"grahub\",\n    \"descriptions\": \"Get a quick view of your customer’s interactions to deliver personalized experiences.\",\n    \"url\": \"https://hidaytrahman.github.io/grahub/\",\n    \"type\": \"EXPERIMENTS\",\n    \"github\": \"https://github.com/hidaytrahman/grahub\",\n    \"technologies\": [\"react\", \"axios\", \"typescript\", \"StyledComponents\", \"CRA\"]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}core/portfolio",
+											"host": [
+												"{{baseURL}}core"
+											],
+											"path": [
+												"portfolio"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 11 Feb 2024 09:51:05 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "440"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "etag",
+											"value": "W/\"1b8-nDbXtMSR5E73q+0vALjHPBdxpdE\""
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Apigw-Requestid",
+											"value": "S9zFchNLIE0EPgA="
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"title\": \"GraHub\",\n        \"name\": \"grahub\",\n        \"descriptions\": \"Get a quick view of your customer’s interactions to deliver personalized experiences.\",\n        \"type\": \"EXPERIMENTS\",\n        \"url\": \"https://hidaytrahman.github.io/grahub/\",\n        \"github\": \"https://github.com/hidaytrahman/grahub\",\n        \"technologies\": [\n            \"react\",\n            \"axios\",\n            \"typescript\",\n            \"StyledComponents\",\n            \"CRA\"\n        ],\n        \"_id\": \"65c89889c2209dff110b4986\",\n        \"__v\": 0\n    },\n    \"message\": \"Portfolio 'grahub' has been successfully created!\"\n}"
 								}
 							]
 						}
