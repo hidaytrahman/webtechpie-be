@@ -1,0 +1,36 @@
+{
+	"_id": "65c7ca30276e1b5ca2897b1e",
+	"title": "Our Solutions",
+	"name": "solutions",
+	"descriptions": "Coding is a form of creative expression. You can turn your ideas into reality by building software and applications that solve real-world problems.",
+	"meta": [
+		{
+			"name": "description",
+			"content": "Get trained by subject matter expert's in Webtechpie | Web App for your business"
+		},
+		{
+			"name": "keywords",
+			"content": "solutions, webtechpie solutions, webtechpie portfolio, webtechpie training, online training service, offline training, tech training, live sessions"
+		}
+	],
+	"body": [
+		{
+			"title": "",
+			"type": "list",
+			"content": "Get trained by subject matter expert's, Live projects from scratch, Open discussions, Collborative teams, Mock Interviews, On demand training (Tech only)",
+			"controls": [
+				{
+					"title": "Access Now",
+					"link": "/solutions",
+					"type": "button",
+					"props": [
+						{
+							"aria-label": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"__v": 0
+}
