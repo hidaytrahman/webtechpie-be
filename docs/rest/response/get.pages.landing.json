@@ -1,0 +1,66 @@
+{
+	"_id": "65c7ca49276e1b5ca2897b22",
+	"title": "Webtechpie | Unite. Code. Inspire",
+	"name": "landing",
+	"descriptions": "Webtechpie | Unite. Code. Inspire",
+	"meta": [
+		{
+			"name": "description",
+			"content": "Welcome to our vibrant and inclusive open source community dedicated to pushing the boundaries of web development. We are a passionate group of developers, designers, and innovators who believe in the power of open collaboration"
+		},
+		{
+			"name": "keywords",
+			"content": "Open Source Community, Collaborative Coding, Web Solutions, Community-driven Development, webtechpie"
+		}
+	],
+	"body": [
+		{
+			"title": "Coding Together, Openly Forever",
+			"type": "section",
+			"content": "Welcome to our vibrant and inclusive open source community dedicated to pushing the boundaries of web development. We are a passionate group of developers, designers, and innovators who believe in the power of open collaboration.",
+			"controls": [
+				{
+					"title": "Explore",
+					"link": "/community",
+					"type": "button",
+					"props": [
+						{
+							"variant": "primary"
+						}
+					]
+				},
+				{
+					"title": "Our Expertise",
+					"link": "/solutions",
+					"type": "button",
+					"props": [
+						{
+							"aria-label": "",
+							"variant": "secondary"
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Learn together",
+			"type": "section",
+			"content": "Are you ready to unlock the world of coding and programming? Whether you're a complete beginner or an experienced developer looking to expand your skills, our 'Learn Code and Programming' section is your gateway to the exciting realm of computer programming.",
+			"controls": [],
+			"list": "Maximize productivity and growth, Endless Opportunities and Problem Solving, Learn the top techniques"
+		},
+		{
+			"title": "Build Together",
+			"type": "section",
+			"content": "coding is a superpower. It's the language of computers, and by learning to code, you gain the ability to create software, websites, mobile apps, and more",
+			"controls": []
+		},
+		{
+			"title": "Explore",
+			"type": "section",
+			"content": "Whether you dream of becoming a software developer, building your own startup, or simply understanding the digital world better, learning to code is a valuable skill. It's a journey that can lead to a fulfilling career and endless possibilities.",
+			"list": "Hands-on coding projects that allow you to apply what you've learned in real-world scenarios. Build web applications, games, and more., Connect with a vibrant community of fellow learners and experienced developers. Share your progress, seek help, and collaborate on coding projects., Coding is not just a skill; it's a superpower. Join us and become a coding superhero today!"
+		}
+	],
+	"__v": 0
+}
