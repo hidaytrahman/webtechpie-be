@@ -1,5 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { teamMemberList } from "./data";
+import { ITeamMember } from "./types";
 
 @Injectable()
 export class TeamsServices {
@@ -11,7 +12,7 @@ export class TeamsServices {
 		return teamMemberList;
 	}
 
-	addMember(payload: any) {
+	addMember(payload: ITeamMember) {
 		if (payload) {
 			teamMemberList.push(payload);
 		} else {

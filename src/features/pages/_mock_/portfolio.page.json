@@ -1,14 +1,5 @@
 {
     "title": "Portfolio",
-    "name": "portfolio",
-    "descriptions": "Our developer community | Professional Team",
-    "meta": [{
-        "name": "description",
-        "content": "Our developer community | Professional Team"
-    },
-    {
-        "name": "keywords",
-        "content": "Open Source Community, Collaborative Coding, Web Solutions, Community-driven Development, webtechpie"
-    }],
-    "body": []
+    "pageId": "portfolio",
+    "descriptions": "Our developer community"
 }
