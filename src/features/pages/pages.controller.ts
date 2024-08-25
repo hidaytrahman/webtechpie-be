@@ -16,7 +16,7 @@ export class PagesController {
 
 	// pages/services
 	@Get("/solutions")
-	getSolutions(): any {
+	getSolutions() {
 		return this.pagesServices.fetchSolutions();
 	}
 
