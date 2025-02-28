@@ -1,0 +1,9 @@
+{
+	"recommendations": [
+		"humao.rest-client",
+		"esbenp.prettier-vscode",
+		"dbaeumer.vscode-eslint",
+		"rchsense.architecture-view-nestjs",
+		"aaron-bond.better-comments"
+	]
+}
