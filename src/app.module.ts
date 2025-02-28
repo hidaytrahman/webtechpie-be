@@ -2,6 +2,7 @@ import { MiddlewareConsumer, Module, NestModule } from "@nestjs/common";
 import { MongooseModule } from "@nestjs/mongoose";
 import { APP_FILTER } from "@nestjs/core";
 import { ConfigModule } from "@nestjs/config";
+import { AuthModule } from "./features/auth/auth.module";
 
 import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
@@ -43,6 +44,7 @@ import { HttpExceptionFilter } from "./config/http-exception.filter";
 		PagesModule,
 		CoreModule,
 		PlanModule,
+		AuthModule,
 	],
 	controllers: [AppController],
 	providers: [
