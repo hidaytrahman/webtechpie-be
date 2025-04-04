@@ -15,6 +15,7 @@ import { PlanModule } from "./features/plan/plan.module";
 import { PlanServices } from "./features/plan/plan.services";
 import { Plan, PlanSchema } from "./features/plan/plan.schema";
 import { HttpExceptionFilter } from "./config/http-exception.filter";
+import { ContactModule } from './features/contact/contact.module';
 
 @Module({
 	imports: [
@@ -45,6 +46,7 @@ import { HttpExceptionFilter } from "./config/http-exception.filter";
 		CoreModule,
 		PlanModule,
 		AuthModule,
+		ContactModule,
 	],
 	controllers: [AppController],
 	providers: [
