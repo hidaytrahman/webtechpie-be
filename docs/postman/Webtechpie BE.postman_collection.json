@@ -19,12 +19,8 @@
 								"header": [],
 								"url": {
 									"raw": "{{baseURL}}pages/portfolio",
-									"host": [
-										"{{baseURL}}pages"
-									],
-									"path": [
-										"portfolio"
-									]
+									"host": ["{{baseURL}}pages"],
+									"path": ["portfolio"]
 								}
 							},
 							"response": [
@@ -35,12 +31,8 @@
 										"header": [],
 										"url": {
 											"raw": "{{baseURL}}pages/portfolio",
-											"host": [
-												"{{baseURL}}pages"
-											],
-											"path": [
-												"portfolio"
-											]
+											"host": ["{{baseURL}}pages"],
+											"path": ["portfolio"]
 										}
 									},
 									"status": "OK",
@@ -86,6 +78,19 @@
 							]
 						},
 						{
+							"name": "Get Pages/Community",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}pages/community",
+									"host": ["{{baseURL}}pages"],
+									"path": ["community"]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Create a Portfolio",
 							"request": {
 								"method": "POST",
@@ -101,12 +106,8 @@
 								},
 								"url": {
 									"raw": "{{baseURL}}pages/portfolio",
-									"host": [
-										"{{baseURL}}pages"
-									],
-									"path": [
-										"portfolio"
-									]
+									"host": ["{{baseURL}}pages"],
+									"path": ["portfolio"]
 								}
 							},
 							"response": [
@@ -126,12 +127,8 @@
 										},
 										"url": {
 											"raw": "{{baseURL}}pages/portfolio",
-											"host": [
-												"{{baseURL}}pages"
-											],
-											"path": [
-												"portfolio"
-											]
+											"host": ["{{baseURL}}pages"],
+											"path": ["portfolio"]
 										}
 									},
 									"status": "Created",
@@ -185,12 +182,8 @@
 						"header": [],
 						"url": {
 							"raw": "{{baseURL}}pages/landing",
-							"host": [
-								"{{baseURL}}pages"
-							],
-							"path": [
-								"landing"
-							]
+							"host": ["{{baseURL}}pages"],
+							"path": ["landing"]
 						}
 					},
 					"response": []
@@ -202,12 +195,8 @@
 						"header": [],
 						"url": {
 							"raw": "{{baseURL}}pages/solutions",
-							"host": [
-								"{{baseURL}}pages"
-							],
-							"path": [
-								"solutions"
-							]
+							"host": ["{{baseURL}}pages"],
+							"path": ["solutions"]
 						}
 					},
 					"response": [
@@ -218,12 +207,8 @@
 								"header": [],
 								"url": {
 									"raw": "{{baseURL}}pages/solutions",
-									"host": [
-										"{{baseURL}}pages"
-									],
-									"path": [
-										"solutions"
-									]
+									"host": ["{{baseURL}}pages"],
+									"path": ["solutions"]
 								}
 							},
 							"status": "OK",
@@ -284,12 +269,8 @@
 						},
 						"url": {
 							"raw": "{{baseURL}}pages/",
-							"host": [
-								"{{baseURL}}pages"
-							],
-							"path": [
-								""
-							]
+							"host": ["{{baseURL}}pages"],
+							"path": [""]
 						}
 					},
 					"response": [
@@ -309,12 +290,8 @@
 								},
 								"url": {
 									"raw": "{{baseURL}}pages/",
-									"host": [
-										"{{baseURL}}pages"
-									],
-									"path": [
-										""
-									]
+									"host": ["{{baseURL}}pages"],
+									"path": [""]
 								}
 							},
 							"status": "Created",
@@ -373,12 +350,8 @@
 								},
 								"url": {
 									"raw": "{{baseURL}}pages/",
-									"host": [
-										"{{baseURL}}pages"
-									],
-									"path": [
-										""
-									]
+									"host": ["{{baseURL}}pages"],
+									"path": [""]
 								}
 							},
 							"status": "Created",
@@ -439,12 +412,8 @@
 						},
 						"url": {
 							"raw": "{{baseURL}}pages/",
-							"host": [
-								"{{baseURL}}pages"
-							],
-							"path": [
-								""
-							]
+							"host": ["{{baseURL}}pages"],
+							"path": [""]
 						}
 					},
 					"response": [
@@ -464,12 +433,8 @@
 								},
 								"url": {
 									"raw": "{{baseURL}}pages/",
-									"host": [
-										"{{baseURL}}pages"
-									],
-									"path": [
-										""
-									]
+									"host": ["{{baseURL}}pages"],
+									"path": [""]
 								}
 							},
 							"status": "Created",
@@ -528,12 +493,8 @@
 								},
 								"url": {
 									"raw": "{{baseURL}}pages/",
-									"host": [
-										"{{baseURL}}pages"
-									],
-									"path": [
-										""
-									]
+									"host": ["{{baseURL}}pages"],
+									"path": [""]
 								}
 							},
 							"status": "Created",
@@ -594,12 +555,8 @@
 						},
 						"url": {
 							"raw": "{{baseURL}}pages/",
-							"host": [
-								"{{baseURL}}pages"
-							],
-							"path": [
-								""
-							]
+							"host": ["{{baseURL}}pages"],
+							"path": [""]
 						}
 					},
 					"response": [
@@ -619,12 +576,8 @@
 								},
 								"url": {
 									"raw": "{{baseURL}}pages/",
-									"host": [
-										"{{baseURL}}pages"
-									],
-									"path": [
-										""
-									]
+									"host": ["{{baseURL}}pages"],
+									"path": [""]
 								}
 							},
 							"status": "Created",
@@ -683,12 +636,8 @@
 								},
 								"url": {
 									"raw": "{{baseURL}}pages/",
-									"host": [
-										"{{baseURL}}pages"
-									],
-									"path": [
-										""
-									]
+									"host": ["{{baseURL}}pages"],
+									"path": [""]
 								}
 							},
 							"status": "Created",
@@ -749,12 +698,8 @@
 						},
 						"url": {
 							"raw": "{{baseURL}}pages/",
-							"host": [
-								"{{baseURL}}pages"
-							],
-							"path": [
-								""
-							]
+							"host": ["{{baseURL}}pages"],
+							"path": [""]
 						}
 					},
 					"response": [
@@ -774,12 +719,8 @@
 								},
 								"url": {
 									"raw": "{{baseURL}}pages/",
-									"host": [
-										"{{baseURL}}pages"
-									],
-									"path": [
-										""
-									]
+									"host": ["{{baseURL}}pages"],
+									"path": [""]
 								}
 							},
 							"status": "Created",
@@ -838,12 +779,8 @@
 								},
 								"url": {
 									"raw": "{{baseURL}}pages/",
-									"host": [
-										"{{baseURL}}pages"
-									],
-									"path": [
-										""
-									]
+									"host": ["{{baseURL}}pages"],
+									"path": [""]
 								}
 							},
 							"status": "Created",
@@ -900,12 +837,8 @@
 						"header": [],
 						"url": {
 							"raw": "{{baseURL}}teams/members",
-							"host": [
-								"{{baseURL}}teams"
-							],
-							"path": [
-								"members"
-							]
+							"host": ["{{baseURL}}teams"],
+							"path": ["members"]
 						}
 					},
 					"response": [
@@ -916,12 +849,8 @@
 								"header": [],
 								"url": {
 									"raw": "{{baseURL}}teams/members",
-									"host": [
-										"{{baseURL}}teams"
-									],
-									"path": [
-										"members"
-									]
+									"host": ["{{baseURL}}teams"],
+									"path": ["members"]
 								}
 							},
 							"status": "OK",
@@ -965,6 +894,18 @@
 							"body": "[\n    {\n        \"name\": \"Hidayt Rahman\",\n        \"role\": \"UI Engineer / UX Research\",\n        \"avatar\": \"https://avatars.githubusercontent.com/u/9712111?v=4\"\n    },\n    {\n        \"name\": \"Rahul Anand\",\n        \"role\": \"Fullstack Engineer\",\n        \"avatar\": \"https://i1.sndcdn.com/avatars-000105338773-dfay5o-t500x500.jpg\"\n    },\n    {\n        \"name\": \"Pradeep Gupta\",\n        \"role\": \"AEM Expert\",\n        \"avatar\": \"/images/default-coder-male.png\"\n    },\n    {\n        \"name\": \"Subhash Thapa\",\n        \"role\": \"UI/UX Designer\",\n        \"avatar\": \"https://mir-s3-cdn-cf.behance.net/user/230/1371d166625967.63c435e8c99d9.jpg\"\n    }\n]"
 						}
 					]
+				},
+				{
+					"name": "Get Teams Summary",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}teams",
+							"host": ["{{baseURL}}teams"]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -981,12 +922,8 @@
 								"header": [],
 								"url": {
 									"raw": "{{baseURL}}core/portfolio",
-									"host": [
-										"{{baseURL}}core"
-									],
-									"path": [
-										"portfolio"
-									]
+									"host": ["{{baseURL}}core"],
+									"path": ["portfolio"]
 								}
 							},
 							"response": []
@@ -1007,12 +944,8 @@
 								},
 								"url": {
 									"raw": "{{baseURL}}core/portfolio",
-									"host": [
-										"{{baseURL}}core"
-									],
-									"path": [
-										"portfolio"
-									]
+									"host": ["{{baseURL}}core"],
+									"path": ["portfolio"]
 								}
 							},
 							"response": [
@@ -1032,12 +965,8 @@
 										},
 										"url": {
 											"raw": "{{baseURL}}pages/portfolio",
-											"host": [
-												"{{baseURL}}pages"
-											],
-											"path": [
-												"portfolio"
-											]
+											"host": ["{{baseURL}}pages"],
+											"path": ["portfolio"]
 										}
 									},
 									"status": "Created",
@@ -1091,12 +1020,8 @@
 						"header": [],
 						"url": {
 							"raw": "{{baseURL}}core/navigations",
-							"host": [
-								"{{baseURL}}core"
-							],
-							"path": [
-								"navigations"
-							]
+							"host": ["{{baseURL}}core"],
+							"path": ["navigations"]
 						}
 					},
 					"response": [
@@ -1107,12 +1032,8 @@
 								"header": [],
 								"url": {
 									"raw": "{{baseURL}}core/navigations",
-									"host": [
-										"{{baseURL}}core"
-									],
-									"path": [
-										"navigations"
-									]
+									"host": ["{{baseURL}}core"],
+									"path": ["navigations"]
 								}
 							},
 							"status": "OK",
@@ -1169,12 +1090,8 @@
 						"header": [],
 						"url": {
 							"raw": "{{baseURL}}plan/",
-							"host": [
-								"{{baseURL}}plan"
-							],
-							"path": [
-								""
-							]
+							"host": ["{{baseURL}}plan"],
+							"path": [""]
 						}
 					},
 					"response": [
@@ -1185,12 +1102,8 @@
 								"header": [],
 								"url": {
 									"raw": "{{baseURL}}core/navigations",
-									"host": [
-										"{{baseURL}}core"
-									],
-									"path": [
-										"navigations"
-									]
+									"host": ["{{baseURL}}core"],
+									"path": ["navigations"]
 								}
 							},
 							"status": "OK",
@@ -1251,12 +1164,8 @@
 						},
 						"url": {
 							"raw": "{{baseURL}}plan/create",
-							"host": [
-								"{{baseURL}}plan"
-							],
-							"path": [
-								"create"
-							]
+							"host": ["{{baseURL}}plan"],
+							"path": ["create"]
 						}
 					},
 					"response": [
@@ -1267,12 +1176,8 @@
 								"header": [],
 								"url": {
 									"raw": "{{baseURL}}core/navigations",
-									"host": [
-										"{{baseURL}}core"
-									],
-									"path": [
-										"navigations"
-									]
+									"host": ["{{baseURL}}core"],
+									"path": ["navigations"]
 								}
 							},
 							"status": "OK",
@@ -1326,9 +1231,7 @@
 				"header": [],
 				"url": {
 					"raw": "{{baseURL}}solutions",
-					"host": [
-						"{{baseURL}}solutions"
-					]
+					"host": ["{{baseURL}}solutions"]
 				}
 			},
 			"response": []
@@ -1349,15 +1252,147 @@
 				},
 				"url": {
 					"raw": "{{baseURL}}teams/member",
-					"host": [
-						"{{baseURL}}teams"
-					],
-					"path": [
-						"member"
-					]
+					"host": ["{{baseURL}}teams"],
+					"path": ["member"]
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "root",
+			"item": [
+				{
+					"name": "Health Check",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}",
+							"host": ["{{baseURL}}"]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Google OAuth Redirect",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}auth/google",
+							"host": ["{{baseURL}}auth"],
+							"path": ["google"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Google OAuth Callback",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}auth/google/callback",
+							"host": ["{{baseURL}}auth"],
+							"path": ["google", "callback"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GitHub OAuth Redirect",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}auth/github",
+							"host": ["{{baseURL}}auth"],
+							"path": ["github"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GitHub OAuth Callback",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}auth/github/callback",
+							"host": ["{{baseURL}}auth"],
+							"path": ["github", "callback"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Auth Status",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}auth/status",
+							"host": ["{{baseURL}}auth"],
+							"path": ["status"]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "contact",
+			"item": [
+				{
+					"name": "Create Contact",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"John\",\n    \"email\": \"john@example.com\",\n    \"phone\": \"+919876543210\",\n    \"company\": \"Freelancer\",\n    \"designation\": \"Software Engineer\",\n    \"location\": \"Noida, India\",\n    \"subject\": \"General Inquiry\",\n    \"message\": \"I am interested in your services\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}contact",
+							"host": ["{{baseURL}}contact"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Contacts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}contact",
+							"host": ["{{baseURL}}contact"]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [
@@ -1365,18 +1400,14 @@
 			"listen": "prerequest",
 			"script": {
 				"type": "text/javascript",
-				"exec": [
-					""
-				]
+				"exec": [""]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
 				"type": "text/javascript",
-				"exec": [
-					""
-				]
+				"exec": [""]
 			}
 		}
 	],
