@@ -14,6 +14,7 @@ export class TokenService {
 		const payload = {
 			sub: user._id ? user._id.toString() : user.id,
 			email: user.email,
+			isAdmin: !!user.isAdmin,
 		};
 
 		const accessToken = this.jwtService.sign(payload);

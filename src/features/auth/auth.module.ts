@@ -9,6 +9,7 @@ import { JwtStrategy } from './strategies/jwt.strategy';
 import { TokenService } from './token.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { User, UserSchema } from './schemas/user.schema';
+import { AdminGuard } from './guards/admin.guard';
 
 @Module({
 	imports: [
@@ -26,6 +27,7 @@ import { User, UserSchema } from './schemas/user.schema';
 		GithubStrategy,
 		JwtStrategy,
 		TokenService,
+		AdminGuard,
 	],
 	exports: [AuthService],
 })

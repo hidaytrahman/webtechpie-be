@@ -1348,6 +1348,39 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Promote User To Admin",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"user-to-promote@example.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}auth/promote-to-admin",
+							"host": ["{{baseURL}}auth"],
+							"path": ["promote-to-admin"]
+						}
+					},
+					"response": []
 				}
 			]
 		},
