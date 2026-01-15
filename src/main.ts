@@ -23,18 +23,20 @@ async function bootstrap() {
 	app.useGlobalFilters(new AllExceptionsFilter(app.getHttpAdapter()));
 
 	const config = new DocumentBuilder()
-		.setTitle('WebTechPie API')
-		.setDescription('The WebTechPie API documentation')
-		.setVersion('1.0')
-		.addTag('auth', 'Authentication endpoints')
-		.addTag('contact', 'Contact form endpoints')
-		.addTag('solutions', 'Solutions endpoints')
-		.addTag('teams', 'Teams endpoints')
-		.addTag('pages', 'Pages endpoints')
-		.addTag('plan', 'Plan endpoints')
+		.setTitle("WebTechPie API")
+		.setDescription("The WebTechPie API documentation")
+		.setVersion("1.0")
+		.addTag("root", "Root and health endpoints")
+		.addTag("auth", "Authentication endpoints")
+		.addTag("contact", "Contact form endpoints")
+		.addTag("solutions", "Solutions endpoints")
+		.addTag("teams", "Teams endpoints")
+		.addTag("pages", "Pages endpoints")
+		.addTag("plan", "Plan endpoints")
+		.addTag("core", "Core UI configuration endpoints")
 		.build();
 	const document = SwaggerModule.createDocument(app, config);
-	SwaggerModule.setup('docs', app, document);
+	SwaggerModule.setup("docs", app, document);
 
 	await app.listen(process.env.PORT || 8080);
 }
