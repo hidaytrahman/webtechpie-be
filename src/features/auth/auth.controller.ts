@@ -1,10 +1,11 @@
-import { Controller, Get, Req, UseGuards } from "@nestjs/common";
+import { Controller, Get, Post, Req, UseGuards } from "@nestjs/common";
 import { AuthGuard } from "@nestjs/passport";
 import { ApiOkResponse, ApiOperation, ApiTags } from "@nestjs/swagger";
 import { Request } from "express";
 import { AuthService } from "./auth.service";
 import { TokenService } from "./token.service";
 import { JwtAuthGuard } from "./guards/jwt-auth.guard";
+import { AdminGuard } from "./guards/admin.guard";
 
 @ApiTags("auth")
 @Controller("auth")
@@ -66,5 +67,17 @@ export class AuthController {
 			return { isAuthenticated: true, user };
 		}
 		return { isAuthenticated: false };
+	}
+
+	@Post("admin/ping")
+	@UseGuards(JwtAuthGuard, AdminGuard)
+	@ApiOperation({ summary: "Admin-only private test endpoint" })
+	@ApiOkResponse({ description: "Returns success when caller is admin user" })
+	async adminPing(@Req() req: Request) {
+		return {
+			statusCode: 200,
+			message: "Admin access granted",
+			user: req.user,
+		};
 	}
 }

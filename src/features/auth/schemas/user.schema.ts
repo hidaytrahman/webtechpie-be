@@ -5,29 +5,32 @@ export type UserDocument = User & Document;
 
 @Schema()
 export class User {
-  @Prop({ required: true })
-  email: string;
+	@Prop({ required: true })
+	email: string;
 
-  @Prop()
-  firstName: string;
+	@Prop()
+	firstName: string;
 
-  @Prop()
-  lastName: string;
+	@Prop()
+	lastName: string;
 
-  @Prop()
-  picture: string;
+	@Prop()
+	picture: string;
 
-  @Prop()
-  accessToken: string;
+	@Prop()
+	accessToken: string;
 
-  @Prop()
-  refreshToken: string;
+	@Prop()
+	refreshToken: string;
 
-  @Prop({ default: Date.now })
-  createdAt: Date;
+	@Prop({ default: false })
+	isAdmin: boolean;
 
-  @Prop({ default: Date.now })
-  updatedAt: Date;
+	@Prop({ default: Date.now })
+	createdAt: Date;
+
+	@Prop({ default: Date.now })
+	updatedAt: Date;
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);

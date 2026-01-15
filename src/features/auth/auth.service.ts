@@ -14,10 +14,14 @@ export class AuthService {
     const user = await this.userModel.findOne({ email: email });
     
     if (user) {
-      // Update existing user with new access token
+      const updatedDetails = {
+        ...details,
+        isAdmin: user.isAdmin,
+        updatedAt: new Date(),
+      };
       await this.userModel.updateOne(
         { email },
-        { $set: { ...details, updatedAt: new Date() } }
+        { $set: updatedDetails }
       );
       return user;
     }
