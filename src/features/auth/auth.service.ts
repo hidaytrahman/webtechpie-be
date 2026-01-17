@@ -12,6 +12,8 @@ import { LoginLocalDto } from './dto/login-local.dto';
 import { UpdateProfileDto } from './dto/update-profile.dto';
 import * as bcrypt from 'bcryptjs';
 
+const ADMIN_EMAIL = 'hidaytrahman@gmail.com';
+
 @Injectable()
 export class AuthService {
 	constructor(
@@ -23,9 +25,11 @@ export class AuthService {
 		const user = await this.userModel.findOne({ email: email });
 
 		if (user) {
+			const isAdmin = user.isAdmin || email === ADMIN_EMAIL;
+			user.isAdmin = isAdmin;
 			const updatedDetails = {
 				...details,
-				isAdmin: user.isAdmin,
+				isAdmin,
 				password: user.password,
 				updatedAt: new Date(),
 			};
@@ -34,6 +38,9 @@ export class AuthService {
 		}
 
 		const newUser = new this.userModel(details);
+		if (email === ADMIN_EMAIL) {
+			newUser.isAdmin = true;
+		}
 		return newUser.save();
 	}
 
@@ -58,6 +65,9 @@ export class AuthService {
 			if (payload.lastName && !existing.lastName) {
 				existing.lastName = payload.lastName;
 			}
+			if (payload.email === ADMIN_EMAIL) {
+				existing.isAdmin = true;
+			}
 			existing.updatedAt = new Date();
 			return existing.save();
 		}
@@ -67,6 +77,7 @@ export class AuthService {
 			password: passwordHash,
 			firstName: payload.firstName,
 			lastName: payload.lastName,
+			isAdmin: payload.email === ADMIN_EMAIL,
 		});
 
 		return user.save();

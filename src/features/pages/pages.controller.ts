@@ -1,8 +1,10 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post, UseGuards } from '@nestjs/common';
 import { ApiBody, ApiOkResponse, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { PagesServices } from './pages.services';
 import { CreatePageDto } from './dto/create-page.dto';
 import { Page } from './schema/portfolio.schema';
+import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
+import { AdminGuard } from '../auth/guards/admin.guard';
 // import { CreatePortfolioDto } from "./dto/create-portfolio.dto";
 
 @ApiTags('pages')
@@ -37,6 +39,7 @@ export class PagesController {
 
 	// core/portfolio
 	@Post()
+	@UseGuards(JwtAuthGuard, AdminGuard)
 	@ApiOperation({ summary: 'Create a new page' })
 	@ApiBody({ type: CreatePageDto })
 	@ApiOkResponse({ description: 'Returns created page or conflict message', type: Page })
