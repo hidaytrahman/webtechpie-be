@@ -1381,6 +1381,114 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Local Signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"user@example.com\",\n    \"password\": \"strongpassword\",\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}auth/signup",
+							"host": ["{{baseURL}}auth"],
+							"path": ["signup"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Local Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"user@example.com\",\n    \"password\": \"strongpassword\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}auth/login",
+							"host": ["{{baseURL}}auth"],
+							"path": ["login"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current User (Me)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}auth/me",
+							"host": ["{{baseURL}}auth"],
+							"path": ["me"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Current User (Me)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"UpdatedFirstName\",\n    \"lastName\": \"UpdatedLastName\",\n    \"picture\": \"https://example.com/avatar.png\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}auth/me",
+							"host": ["{{baseURL}}auth"],
+							"path": ["me"]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -1440,7 +1548,23 @@
 			"listen": "test",
 			"script": {
 				"type": "text/javascript",
-				"exec": [""]
+				"exec": [
+					"try {",
+					"  if (pm.response.code === 200 || pm.response.code === 201) {",
+					"    var jsonData = pm.response.json();",
+					"    if (jsonData && jsonData.tokens && jsonData.tokens.accessToken) {",
+					"      var access = jsonData.tokens.accessToken;",
+					"      var refresh = jsonData.tokens.refreshToken || \"\";",
+					"      pm.environment.set(\"accessToken\", access);",
+					"      pm.environment.set(\"refreshToken\", refresh);",
+					"      pm.collectionVariables.set(\"accessToken\", access);",
+					"      pm.collectionVariables.set(\"refreshToken\", refresh);",
+					"    }",
+					"  }",
+					"} catch (e) {",
+					"  // ignore non-JSON responses",
+					"}"
+				]
 			}
 		}
 	],
