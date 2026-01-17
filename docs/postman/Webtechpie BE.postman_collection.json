@@ -94,7 +94,18 @@
 							"name": "Create a Portfolio",
 							"request": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{accessToken}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\n    \"title\": \"Codeeng\",\n    \"name\": \"codeeng\",\n    \"descriptions\": \"Basic configuration of the code environment needed for your project or new machine.\",\n    \"url\": \"https://codeeng.vercel.app/\",\n    \"type\": \"DEV_COMMUNITY\",\n    \"technologies\": [\"nextjs\"]\n}",
@@ -257,7 +268,18 @@
 					"name": "Create a Page",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"title\": \"Our Solutions\",\n    \"name\": \"solutions\",\n    \"descriptions\": \"Coding is a form of creative expression. You can turn your ideas into reality by building software and applications that solve real-world problems.\",\n    \"meta\": [{\n        \"name\": \"description\",\n        \"content\": \"Get trained by subject matter expert's in Webtechpie | Web App for your business\"\n    },\n    {\n        \"name\": \"keywords\",\n        \"content\": \"solutions, webtechpie solutions, webtechpie portfolio, webtechpie training, online training service, offline training, tech training, live sessions\"\n    }],\n    \"body\": [\n        {\n            \"title\": \"\",\n            \"type\": \"list\",\n            \"content\": \"Get trained by subject matter expert's, Live projects from scratch, Open discussions, Collborative teams, Mock Interviews, On demand training (Tech only)\",\n            \"controls\": [\n                {\n                    \"title\": \"Access Now\",\n                    \"link\": \"/solutions\",\n                    \"type\": \"button\",\n                    \"props\": [\n                        {\n                            \"aria-label\": \"\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}",
@@ -400,7 +422,18 @@
 					"name": "Create a Landing Page",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"title\": \"Webtechpie | Unite. Code. Inspire\",\n    \"name\": \"landing\",\n    \"descriptions\": \"Webtechpie | Unite. Code. Inspire\",\n    \"meta\": [{\n        \"name\": \"description\",\n        \"content\": \"Welcome to our vibrant and inclusive open source community dedicated to pushing the boundaries of web development. We are a passionate group of developers, designers, and innovators who believe in the power of open collaboration\"\n    },\n    {\n        \"name\": \"keywords\",\n        \"content\": \"Open Source Community, Collaborative Coding, Web Solutions, Community-driven Development, webtechpie\"\n    }],\n    \"body\": [\n        {\n            \"title\": \"Coding Together, Openly Forever\",\n            \"type\": \"section\",\n            \"content\": \"Welcome to our vibrant and inclusive open source community dedicated to pushing the boundaries of web development. We are a passionate group of developers, designers, and innovators who believe in the power of open collaboration.\",\n            \"controls\": [\n                {\n                    \"title\": \"Explore\",\n                    \"link\": \"/community\",\n                    \"type\": \"button\",\n                    \"props\": [\n                        {\n                            \"variant\": \"primary\"\n                        }\n                    ]\n                },\n                {\n                    \"title\": \"Our Expertise\",\n                    \"link\": \"/solutions\",\n                    \"type\": \"button\",\n                    \"props\": [\n                        {\n                            \"aria-label\": \"\",\n                            \"variant\": \"secondary\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"title\": \"Learn together\",\n            \"type\": \"section\",\n            \"content\": \"Are you ready to unlock the world of coding and programming? Whether you're a complete beginner or an experienced developer looking to expand your skills, our 'Learn Code and Programming' section is your gateway to the exciting realm of computer programming.\",\n            \"controls\": [],\n            \"list\": \"Maximize productivity and growth, Endless Opportunities and Problem Solving, Learn the top techniques\"\n        },\n        {\n            \"title\": \"Build Together\",\n            \"type\": \"section\",\n            \"content\": \"coding is a superpower. It's the language of computers, and by learning to code, you gain the ability to create software, websites, mobile apps, and more\",\n            \"controls\": []\n        },\n        {\n            \"title\": \"Explore\",\n            \"type\": \"section\",\n            \"content\": \"Whether you dream of becoming a software developer, building your own startup, or simply understanding the digital world better, learning to code is a valuable skill. It's a journey that can lead to a fulfilling career and endless possibilities.\",\n            \"list\": \"Hands-on coding projects that allow you to apply what you've learned in real-world scenarios. Build web applications, games, and more., Connect with a vibrant community of fellow learners and experienced developers. Share your progress, seek help, and collaborate on coding projects., Coding is not just a skill; it's a superpower. Join us and become a coding superhero today!\"\n        }\n    ]\n}",
@@ -543,7 +576,18 @@
 					"name": "Create a Community Page",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"title\": \"Community\",\n    \"name\": \"community\",\n    \"descriptions\": \"Our developer community is growing every day. Join us to learn, share your knowledge and get involved in the development\",\n    \"meta\": [{\n        \"name\": \"description\",\n        \"content\": \"Our developer community is growing every day. Join us to learn, share your knowledge and get involved in the development\"\n    },\n    {\n        \"name\": \"keywords\",\n        \"content\": \"Open Source Community, Collaborative Coding, Web Solutions, Community-driven Development, webtechpie\"\n    }],\n    \"body\": [\n        {\n            \"title\": \"Open Source, Team\",\n            \"type\": \"section\",\n            \"content\": \"In today's digital age, coding is a superpower. It's the language of computers, and by learning to code, you gain the ability to create software, websites, mobile apps, and more. Here are some compelling reasons to start your coding journey with us:\",\n            \"controls\": [\n                {\n                    \"title\": \"Access Now\",\n                    \"link\": \"/solutions\",\n                    \"type\": \"button\",\n                    \"props\": [\n                        {\n                            \"variant\": \"primary\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}",
@@ -686,7 +730,18 @@
 					"name": "Create a Portfolio Page",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"title\": \"Portfolio\",\n    \"name\": \"portfolio\",\n    \"descriptions\": \"Our developer community | Professional Team\",\n    \"meta\": [{\n        \"name\": \"description\",\n        \"content\": \"Our developer community | Professional Team\"\n    },\n    {\n        \"name\": \"keywords\",\n        \"content\": \"Open Source Community, Collaborative Coding, Web Solutions, Community-driven Development, webtechpie\"\n    }],\n    \"body\": []\n}",
@@ -932,7 +987,18 @@
 							"name": "Create a Portfolio",
 							"request": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{accessToken}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\n    \"title\": \"Codeeng one\",\n    \"name\": \"codeeng\",\n    \"descriptions\": \"Basic configuration of the code environment needed for your project or new machine.\",\n    \"url\": \"https://codeeng.vercel.app/\",\n    \"type\": \"DEV_COMMUNITY\",\n    \"technologies\": [\"nextjs\"]\n}",
@@ -1152,7 +1218,18 @@
 					"name": "Create a Plan",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"title\": \"Pro\",\n    \"name\": \"pro\",\n    \"descriptions\": \"Currently, We are working on it, You will get update in the WhatsApp group :)\",\n    \"isPremium\": true,\n    \"type\": \"always\",\n    \"price\": 0\n}",
@@ -1240,7 +1317,18 @@
 			"name": "Create Member",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{accessToken}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"name\": \"rahul\"\n}",
@@ -1500,6 +1588,11 @@
 					"request": {
 						"method": "POST",
 						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							},
 							{
 								"key": "Content-Type",
 								"value": "application/json"

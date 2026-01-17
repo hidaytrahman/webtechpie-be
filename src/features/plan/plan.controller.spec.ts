@@ -1,26 +1,26 @@
-import { Test, TestingModule } from "@nestjs/testing";
-import { PlanController } from "./plan.controller";
-import { PlanServices } from "./plan.services";
-import { planList } from "./data";
-import { MongoMemoryServer } from "mongodb-memory-server";
-import { Connection, Model, connect } from "mongoose";
-import { Plan, PlanSchema } from "./plan.schema";
-import { getModelToken } from "@nestjs/mongoose";
-import { IPlan } from "./types";
+import { Test, TestingModule } from '@nestjs/testing';
+import { PlanController } from './plan.controller';
+import { PlanServices } from './plan.services';
+import { planList } from './data';
+import { MongoMemoryServer } from 'mongodb-memory-server';
+import { Connection, Model, connect } from 'mongoose';
+import { Plan, PlanSchema } from './plan.schema';
+import { getConnectionToken, getModelToken } from '@nestjs/mongoose';
+import { IPlan } from './types';
 
 export const PlanDTOStub = (): IPlan => {
 	return {
-		id: "55454",
-		title: "This is the title of the article",
-		descriptions: "Vinicius Santos de Pontes",
-		name: "basic",
-		type: "always",
+		id: '55454',
+		title: 'This is the title of the article',
+		descriptions: 'Vinicius Santos de Pontes',
+		name: 'basic',
+		type: 'always',
 		price: 2000,
-		isPremium: false
+		isPremium: false,
 	};
 };
 
-describe("auth", () => {
+describe('auth', () => {
 	let planController: PlanController;
 	// let planServices: PlanServices;
 
@@ -43,6 +43,7 @@ describe("auth", () => {
 			providers: [
 				PlanServices,
 				{ provide: getModelToken(Plan.name), useValue: planModel },
+				{ provide: getConnectionToken(), useValue: mongoConnection },
 			],
 		}).compile();
 		planController = app.get<PlanController>(PlanController);
@@ -81,16 +82,15 @@ describe("auth", () => {
 	// 	planController = app.get<PlanController>(PlanController);
 	// });
 
-	describe("root", () => {
+	describe('root', () => {
 		it('should return "plan results"', () => {
 			expect(planController.getPlan()).toBe(planList);
 		});
 
-		it("should return the saved object", async () => {
+		it('should return the saved object', async () => {
 			const createdArticle =
 				await planController.createPlan(PlanDTOStub());
-			expect(createdArticle.title).toBe(PlanDTOStub().title);
+			expect(createdArticle.data.title).toBe(PlanDTOStub().title);
 		});
 	});
-
 });
