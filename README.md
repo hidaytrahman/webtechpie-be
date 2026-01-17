@@ -221,8 +221,10 @@ Successful OAuth callback returns:
 
 #### Session Status
 
-| Method | Path           | Auth       | Description                             |
-|--------|----------------|------------|-----------------------------------------|
+| Method | Path         | Auth       | Description                             |
+|--------|--------------|------------|-----------------------------------------|
+| GET    | `/auth/me`   | Bearer JWT | Get profile of current user             |
+| PATCH  | `/auth/me`   | Bearer JWT | Update profile of current user          |
 | GET    | `/auth/status` | Bearer JWT | Returns auth status and user (if any)   |
 
 Response:
