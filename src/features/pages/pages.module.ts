@@ -1,5 +1,4 @@
 import { Module } from "@nestjs/common";
-
 import { PagesServices } from "./pages.services";
 import { PagesController } from "./pages.controller";
 import { MongooseModule } from "@nestjs/mongoose";
@@ -13,5 +12,6 @@ import { Page, PageSchema } from "./schema/portfolio.schema";
 			{ name: Page.name, schema: PageSchema },
 		]),
 	],
+	exports: [PagesServices],
 })
 export class PagesModule {}

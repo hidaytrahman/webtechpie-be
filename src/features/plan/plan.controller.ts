@@ -14,7 +14,7 @@ export class PlanController {
 	@Get()
 	@ApiOperation({ summary: 'Get all plans' })
 	@ApiOkResponse({ description: 'Returns list of plans', type: [Plan] })
-	getPlan() {
+	async getPlan() {
 		return this.planServices.getPlans();
 	}
 

@@ -1,5 +1,4 @@
 import { Injectable } from "@nestjs/common";
-import { planList } from "./data";
 import { InjectConnection, InjectModel } from "@nestjs/mongoose";
 import { Connection, Model } from "mongoose";
 import { Plan } from "./plan.schema";
@@ -12,8 +11,8 @@ export class PlanServices {
 		@InjectConnection() private connection: Connection
 	) {}
 
-	getPlans() {
-		return planList;
+	async getPlans(): Promise<Plan[]> {
+		return this.planModel.find().exec();
 	}
 
 	async create(payload: CreatePlanDto): Promise<any> {

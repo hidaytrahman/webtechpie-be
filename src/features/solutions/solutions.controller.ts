@@ -9,7 +9,7 @@ export class SolutionsController {
 	@Get()
 	@ApiOperation({ summary: "Get solutions configuration" })
 	@ApiOkResponse({ description: "Returns solutions information and highlights" })
-	getSolution(): string {
+	async getSolution(): Promise<any> {
 		return this.solutionsServices.getSolutions();
 	}
 }
