@@ -65,18 +65,29 @@ describe("AuthController", () => {
   });
 
   describe("googleAuthRedirect", () => {
-    it("should handle Google OAuth callback", async () => {
-      const req = { user: mockUser };
-      const result = await controller.googleAuthRedirect(req as any);
-      expect(result).toEqual({
-        statusCode: 200,
-        data: mockUser,
-        tokens: {
-          accessToken: "mock-access-token",
-          refreshToken: "mock-refresh-token",
-        },
-        message: "User successfully authenticated with Google",
-      });
+    it("should redirect to frontend callback with tokens", async () => {
+      const req = {
+        user: mockUser,
+        query: { code: "mock-code" },
+      };
+
+      const redirect = jest.fn();
+      const res: any = { redirect };
+
+      await controller.googleAuthRedirect(req as any, res);
+
+      expect(mockTokenService.generateTokens).toHaveBeenCalledWith(mockUser);
+
+      const expectedBase =
+        process.env.FRONTEND_AUTH_CALLBACK_URL ||
+        "http://localhost:3000/auth/callback";
+
+      expect(redirect).toHaveBeenCalledTimes(1);
+      const [status, url] = redirect.mock.calls[0];
+      expect(status).toBe(302);
+      expect(url.startsWith(expectedBase)).toBe(true);
+      expect(url).toContain("accessToken=");
+      expect(url).toContain("refreshToken=");
     });
   });
 
