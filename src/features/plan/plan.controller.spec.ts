@@ -1,7 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { PlanController } from './plan.controller';
 import { PlanServices } from './plan.services';
-import { planList } from './data';
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import { Connection, Model, connect } from 'mongoose';
 import { Plan, PlanSchema } from './plan.schema';
@@ -83,8 +82,9 @@ describe('auth', () => {
 	// });
 
 	describe('root', () => {
-		it('should return "plan results"', () => {
-			expect(planController.getPlan()).toBe(planList);
+		it('should return an empty array when there are no plans', async () => {
+			const result = await planController.getPlan();
+			expect(result).toEqual([]);
 		});
 
 		it('should return the saved object', async () => {

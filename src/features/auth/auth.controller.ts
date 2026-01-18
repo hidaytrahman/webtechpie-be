@@ -5,11 +5,12 @@ import {
 	Patch,
 	Post,
 	Req,
+	Res,
 	UseGuards,
 } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { ApiBody, ApiOkResponse, ApiOperation, ApiTags } from '@nestjs/swagger';
-import { Request } from 'express';
+import { Request, Response } from 'express';
 import { AuthService } from './auth.service';
 import { TokenService } from './token.service';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';
@@ -34,16 +35,29 @@ export class AuthController {
 	@Get('google/callback')
 	@UseGuards(AuthGuard('google'))
 	@ApiOperation({ summary: 'Handle Google OAuth callback' })
-	@ApiOkResponse({ description: 'Returns authenticated user payload' })
-	async googleAuthRedirect(@Req() req: Request) {
+	@ApiOkResponse({
+		description:
+			'Redirects to frontend callback with accessToken and refreshToken',
+	})
+	async googleAuthRedirect(@Req() req: Request, @Res() res: Response) {
+		const code = (req.query && (req.query['code'] as string)) || undefined;
+		if (code) {
+			// Google OAuth code already exchanged by the AuthGuard/strategy.
+			// Kept here for observability or future logging if needed.
+		}
+
 		const user = req.user;
 		const tokens = this.tokenService.generateTokens(user);
-		return {
-			statusCode: 200,
-			data: user,
-			tokens,
-			message: 'User successfully authenticated with Google',
-		};
+
+		const frontendCallback =
+			process.env.FRONTEND_AUTH_CALLBACK_URL ||
+			'http://localhost:3000/auth/callback';
+
+		const redirectUrl = `${frontendCallback}?accessToken=${encodeURIComponent(
+			tokens.accessToken,
+		)}&refreshToken=${encodeURIComponent(tokens.refreshToken)}`;
+
+		res.redirect(302, redirectUrl);
 	}
 
 	@Get('github')

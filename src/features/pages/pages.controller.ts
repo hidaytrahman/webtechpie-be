@@ -1,10 +1,20 @@
-import { Body, Controller, Get, Post, UseGuards } from '@nestjs/common';
+import {
+	Body,
+	Controller,
+	Delete,
+	Get,
+	Param,
+	Patch,
+	Post,
+	UseGuards,
+} from '@nestjs/common';
 import { ApiBody, ApiOkResponse, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { PagesServices } from './pages.services';
 import { CreatePageDto } from './dto/create-page.dto';
 import { Page } from './schema/portfolio.schema';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 import { AdminGuard } from '../auth/guards/admin.guard';
+import { UpdatePageDto } from './dto/update-page.dto';
 // import { CreatePortfolioDto } from "./dto/create-portfolio.dto";
 
 @ApiTags('pages')
@@ -12,48 +22,63 @@ import { AdminGuard } from '../auth/guards/admin.guard';
 export class PagesController {
 	constructor(private pagesServices: PagesServices) {}
 
-	@Get('/landing')
-	@ApiOperation({ summary: 'Get landing page content' })
-	@ApiOkResponse({ description: 'Returns landing page content', type: Page })
-	async getLanding() {
-		return await this.pagesServices.fetchLanding();
+	@Get('/:name')
+	@ApiOperation({ summary: 'Get page content by name' })
+	@ApiOkResponse({ description: 'Returns page content', type: Page })
+	async getPageByName(@Param('name') name: string): Promise<any> {
+		return this.pagesServices.fetchByName(name);
 	}
 
-	// pages/config
-
-	// pages/services
-	@Get('/solutions')
-	@ApiOperation({ summary: 'Get solutions page content' })
-	@ApiOkResponse({ description: 'Returns solutions page content', type: Page })
-	getSolutions() {
-		return this.pagesServices.fetchSolutions();
+	@Get()
+	@UseGuards(JwtAuthGuard, AdminGuard)
+	@ApiOperation({ summary: 'Get all pages (admin only)' })
+	@ApiOkResponse({ description: 'Returns all pages', type: [Page] })
+	async getAllPages(): Promise<Page[]> {
+		return this.pagesServices.findAll();
 	}
 
-	// pages/portfolio
-	@Get('/portfolio')
-	@ApiOperation({ summary: 'Get portfolio page metadata' })
-	@ApiOkResponse({ description: 'Returns portfolio page metadata' })
-	getPortfolio(): any {
-		return this.pagesServices.getPortfolio();
+	@Get('/id/:id')
+	@UseGuards(JwtAuthGuard, AdminGuard)
+	@ApiOperation({ summary: 'Get page by id (admin only)' })
+	@ApiOkResponse({ description: 'Returns a page', type: Page })
+	async getPageById(@Param('id') id: string): Promise<Page> {
+		return this.pagesServices.findOneById(id);
 	}
 
 	// core/portfolio
 	@Post()
 	@UseGuards(JwtAuthGuard, AdminGuard)
-	@ApiOperation({ summary: 'Create a new page' })
 	@ApiBody({ type: CreatePageDto })
-	@ApiOkResponse({ description: 'Returns created page or conflict message', type: Page })
+	@ApiOkResponse({
+		description: 'Returns created page or conflict message',
+		type: Page,
+	})
 	async createPortfolio(@Body() createPortfolioDto: CreatePageDto) {
 		return this.pagesServices.createPage(createPortfolioDto);
 	}
 
-	// pages/community
-	@Get('/community')
-	@ApiOperation({ summary: 'Get community page content' })
-	@ApiOkResponse({ description: 'Returns community page content' })
-	getCommunity(): any {
-		return this.pagesServices.getPortfolio();
+	@Patch('/:id')
+	@UseGuards(JwtAuthGuard, AdminGuard)
+	@ApiOperation({ summary: 'Update a page (admin only)' })
+	@ApiBody({ type: UpdatePageDto })
+	@ApiOkResponse({
+		description: 'Returns updated page',
+		type: Page,
+	})
+	async updatePage(
+		@Param('id') id: string,
+		@Body() updatePageDto: UpdatePageDto,
+	) {
+		return this.pagesServices.updatePage(id, updatePageDto);
 	}
 
-	// pages/members
+	@Delete('/:id')
+	@UseGuards(JwtAuthGuard, AdminGuard)
+	@ApiOperation({ summary: 'Delete a page (admin only)' })
+	@ApiOkResponse({
+		description: 'Returns delete confirmation message',
+	})
+	async deletePage(@Param('id') id: string) {
+		return this.pagesServices.deletePage(id);
+	}
 }

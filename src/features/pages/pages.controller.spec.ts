@@ -3,8 +3,6 @@ import { PagesController } from "./pages.controller";
 import { PagesServices } from "./pages.services";
 
 import pageLandingMock from "./_mock_/landing.page.json";
-import pageSolutionsMock from "./_mock_/solutions.page.json";
-// import pagePortfolioMock from "./_mock_/portfolio.page.json";
 
 describe("PagesController", () => {
 	let controller: PagesController;
@@ -16,14 +14,14 @@ describe("PagesController", () => {
 			providers: [
 				{
 					provide: PagesServices,
-					useClass: jest.fn().mockImplementation(() => ({
-						getLanding: jest.fn(),
-						fetchLanding: jest.fn(),
-						fetchSolutions: jest.fn(),
-						getSolutions: jest.fn(),
-						getPortfolio: jest.fn(),
+					useValue: {
+						fetchByName: jest.fn(),
 						createPage: jest.fn(),
-					})),
+						findAll: jest.fn(),
+						findOneById: jest.fn(),
+						updatePage: jest.fn(),
+						deletePage: jest.fn(),
+					},
 				},
 			],
 		}).compile();
@@ -37,31 +35,21 @@ describe("PagesController", () => {
 	});
 
 	describe("root", () => {
-		it('should return "getSolutions() results"', async () => {
-			jest.spyOn(pagesServices, "fetchSolutions").mockResolvedValue(
-				pageSolutionsMock
-			);
-
-			const response = await controller.getSolutions();
-			expect(response).toEqual(pageSolutionsMock);
-		});
-
-		it('should return "fetchLanding() results"', async () => {
-			jest.spyOn(pagesServices, "fetchLanding").mockResolvedValue(
+		it("should return page content by name", async () => {
+			jest.spyOn(pagesServices, "fetchByName").mockResolvedValue(
 				pageLandingMock
 			);
 
-			const response = await controller.getLanding();
+			const response = await controller.getPageByName("landing");
 			expect(response).toEqual(pageLandingMock);
 		});
 
-		// it('should return "createPage() results"', async () => {
-		// 	jest.spyOn(pagesServices, "getPortfolio").mockResolvedValue(
-		// 		pagePortfolioMock
-		// 	);
+		it("should return all pages for admin", async () => {
+			const pages = [pageLandingMock];
+			jest.spyOn(pagesServices, "findAll").mockResolvedValue(pages as any);
 
-		// 	const response = await controller.getPortfolio();
-		// 	expect(response).toEqual(pagePortfolioMock);
-		// });
+			const response = await controller.getAllPages();
+			expect(response).toEqual(pages);
+		});
 	});
 });
